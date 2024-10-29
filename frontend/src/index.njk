@@ -1,0 +1,198 @@
+---
+eleventyComputed:
+  title: "{{ inicio[0].titleseo }}"
+  description: "{{ inicio[0].descseo }}"
+  keywords: "{{ inicio[0].keyseo }}"
+layout: "base.njk"
+permalink: "/{{ page.fileSlug }}/"
+---
+
+<div
+  data-barba="container"
+  data-barba-namespace="inicio"
+  data-css="inicio"
+  data-js="inicio"
+>
+  {% for item in inicio %}
+  <section id="section__hero">
+    <div class="column__2 pad__lr__5">
+      <div class="col__left">
+        <h1>{{ item.heroH1 }}</h1>
+        <div>{{ item.heroH2 | safe }}</div>
+        <p>{{ item.heroP }}</p>
+      </div>
+      <div class="col__right">
+        <a class="btn__hero">
+          <img src="/images/btnhero_arrow.svg" />
+          <div class="btn__circle">
+            <img src="/images/btnhero_circle.svg" />
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="column__1 img__hero pad__lr__5">
+      {% if item.heroImg %}
+      <picture>
+        {% for format, images in item.heroImg %}
+        <source
+          srcset="{{ images | srcset }}"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          type="image/{{ format }}" />
+        {% endfor %}
+        <img src="{{ item.heroImg.jpeg[0].url }}" alt="{{ item.heroImgAlt }}"
+      /></picture>
+      {% endif %}
+    </div>
+    <div class="column__3">
+      <div class="col__left">
+        {% if item.heroGallery1 %}
+        <picture class="heroGallery">
+          {% for format, images in item.heroGallery1 %}
+          <source
+            srcset="{{ images | srcset }}"
+            sizes="(max-width: 600px) 100vw, 600px"
+            type="image/{{ format }}"
+          />
+          {% endfor %}
+          <img src="{{ item.heroGallery1.jpeg[0].url }}" />
+        </picture>
+        {% endif %} {% if item.heroGallery2 %}
+        <picture class="heroGallery">
+          {% for format, images in item.heroGallery2 %}
+          <source
+            srcset="{{ images | srcset }}"
+            sizes="(max-width: 600px) 100vw, 600px"
+            type="image/{{ format }}"
+          />
+          {% endfor %}
+          <img src="{{ item.heroGallery2.jpeg[0].url }}" />
+        </picture>
+        {% endif %}
+      </div>
+      <div class="col__center"></div>
+      <div class="col__right">
+        {% if item.heroGallery3 %}
+        <picture class="heroGallery">
+          {% for format, images in item.heroGallery3 %}
+          <source
+            srcset="{{ images | srcset }}"
+            sizes="(max-width: 600px) 100vw, 600px"
+            type="image/{{ format }}"
+          />
+          {% endfor %}
+          <img src="{{ item.heroGallery3.jpeg[0].url }}" />
+        </picture>
+        {% endif %} {% if item.heroGallery4 %}
+        <picture class="heroGallery">
+          {% for format, images in item.heroGallery4 %}
+          <source
+            srcset="{{ images | srcset }}"
+            sizes="(max-width: 600px) 100vw, 600px"
+            type="image/{{ format }}"
+          />
+          {% endfor %}
+          <img src="{{ item.heroGallery4.jpeg[0].url }}" />
+        </picture>
+        {% endif %}
+      </div>
+    </div>
+    <div class="column__1 vid__hero">
+      <video id="video__inicio" width="320" height="240" autoplay loop muted>
+        <source src="/images/inicio/emeka_inicio.mp4" type="video/mp4" />
+        Tu navegador no soporta este video
+      </video>
+      <div class="titulo__creamos"></div>
+    </div>
+    <div class="sello">
+      <img src="/images/emeka_sello.svg" alt="EMEKÁ desarrollos" />
+    </div>
+  </section>
+
+  <section id="section__intro" class="pad__all__10 fadeInOut">
+    <div class="titulo__habitat"></div>
+    <div class="column__1 flex__align__c">
+      <div class="width__60">
+        <div>{{ item.introRichText1 | safe }}</div>
+        <div class="column__2 mar__top__5">
+          <div class="col__left flex__justify__sb width__30">
+            {% if item.introImg2 %}
+              <picture>
+                {% for format, images in item.introImg2 %}
+                <source srcset="{{ images | srcset }}" sizes="(max-width: 600px) 100vw, 600px" type="image/{{ format }}" />
+                {% endfor %}
+                <img src="{{ item.introImg2.jpeg[0].url }}" alt="{{ item.introImg2Alt }}"/>
+              </picture>
+            {% endif %}
+          </div>
+          <div class="col__right width__70 pad__left__5">
+            {% if item.introImg1 %}
+              <picture>
+                {% for format, images in item.introImg1 %}
+                <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
+                {% endfor %}
+                <img src="{{ item.introImg1.jpeg[0].url }}" alt="{{ item.introImg1Alt }}" />
+              </picture>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__sliders">
+    <div class="intro__slider1">
+      {% for band in item.introBand1 %}
+        <picture>
+          {% for format, images in band %}
+          <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
+          {% endfor %}
+          <img src="{{ band.jpeg[0].url }}" alt="{{ band.altText }}" />
+        </picture>
+      {% endfor %}
+    </div>
+    <div class="intro__slider2">
+      {% for band in item.introBand2 %}
+        <picture>
+          {% for format, images in band %}
+          <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
+          {% endfor %}
+          <img src="{{ band.jpeg[0].url }}" alt="{{ band.altText }}" />
+        </picture>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="section__arch">
+    <div class="column__2">
+      <div class="col__left">
+        <h2>{{ item.intro2.intro2Title | safe }}</h2>
+          {{ item.intro2.intro2RichText | safe }}
+      </div>
+      <div class="col__right">
+        {% if item.intro2.intro2Img %}
+          <picture>
+            {% for format, images in item.intro2.intro2Img %}
+            <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
+            {% endfor %}
+            <img src="{{ item.intro2.intro2Img.jpeg[0].url }}" alt="{{ item.intro2.intro2ImgAlt }}" />
+          </picture>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section id="section__recentProducts">
+    <div class="column__1 flex__align__c">
+        <h2>Proyectos más recientes</h2>
+        <ul role="list" class="listado__x3 width__100 pad__top__5">
+            {% for item in item.recentProdRef.recentProducts %}
+                {% include "desarrollo-card.njk" %}
+            {% endfor %}
+        </ul>
+        <a href="/productos/" class="btn arrow__right mar__top__5">Ver todos los desarrollos</a>
+    </div>
+  </section>
+
+  {% endfor %}
+</div>
+

@@ -1,0 +1,63 @@
+---
+eleventyComputed:
+  title: "{{ contacto[0].titleseo }}"
+  description: "{{ contacto[0].descseo }}"
+  keywords: "{{ contacto[0].keyseo }}"
+layout: "base.njk"
+permalink: "/{{ page.fileSlug }}/"
+---
+<div data-barba="container" data-barba-namespace="contacto" data-css="contacto" data-js="contacto">
+  {% for item in contacto %}
+    <section id="section__hero" class="pad__lr__5 fadeInOut">
+      <div class="column__2">
+        <div class="col__left flex__justify__c pad__right__5 width__45">            
+          <div class="semiBold">{{ item.heroH2 | safe }}</div>
+        </div>
+        <div class="col__right width__55"></div>
+      </div>
+    </section>
+
+    <section id='section__map' class='pad__all__5 fadeInOut'>
+      <div class="column__1">
+        <div id="map-container" data-map-iframe="{{ item.map | escape }}"></div>
+        <a class='btn btn__secondary'>Abrir en google maps</a>
+      </div>
+    </section>
+  {% endfor %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mapContainer = document.getElementById('map-container');
+  const iframeString = mapContainer.getAttribute('data-map-iframe');
+  
+  if (iframeString) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(iframeString, 'text/html');
+    const iframe = doc.querySelector('iframe');
+
+    if (iframe) {
+      // Copiar los atributos existentes
+      const newIframe = document.createElement('iframe');
+      Array.from(iframe.attributes).forEach(attr => {
+        newIframe.setAttribute(attr.name, attr.value);
+      });
+
+      // Asegurar que tenga los atributos deseados
+      newIframe.width = '100%';
+      newIframe.height = '100%';
+      newIframe.style.border = '0';
+      newIframe.allowFullscreen = true;
+      newIframe.loading = 'lazy';
+      newIframe.referrerPolicy = 'no-referrer-when-downgrade';
+      
+      // Asegurar que tenga un título para accesibilidad
+      if (!newIframe.hasAttribute('title')) {
+        newIframe.title = 'Google Maps';
+      }
+
+      mapContainer.appendChild(newIframe);
+    }
+  }
+});
+</script>

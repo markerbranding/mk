@@ -34,12 +34,9 @@ permalink: "/{{ page.fileSlug }}/"
       {% if item.heroImg %}
       <picture>
         {% for format, images in item.heroImg %}
-        <source
-          srcset="{{ images | srcset }}"
-          sizes="(max-width: 1200px) 100vw, 1200px"
-          type="image/{{ format }}" />
+        <source srcset="{{ images | srcset }}" sizes="(max-width: 1800px) 100vw, 1800px" type="image/{{ format }}" />
         {% endfor %}
-        <img src="{{ item.heroImg.jpeg[0].url }}" alt="{{ item.heroImgAlt }}"
+        <img src="{{ item.heroImg.webp[0].url }}" alt="{{ item.heroImgAlt }}"
       /></picture>
       {% endif %}
     </div>
@@ -108,7 +105,7 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="section__intro" class="pad__all__10 fadeInOut">
+  <section id="section__intro" class="fadeInOut">
     <div class="titulo__habitat"></div>
     <div class="column__1 flex__align__c">
       <div class="width__60">
@@ -184,7 +181,7 @@ permalink: "/{{ page.fileSlug }}/"
   <section id="section__recentProducts">
     <div class="column__1 flex__align__c">
         <h2>Proyectos más recientes</h2>
-        <ul role="list" class="listado__x3 width__100 pad__top__5">
+        <ul role="list">
             {% for item in item.recentProdRef.recentProducts %}
                 {% include "desarrollo-card.njk" %}
             {% endfor %}

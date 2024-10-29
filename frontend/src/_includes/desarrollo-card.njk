@@ -1,11 +1,11 @@
 
 <li class="card card__producto" >
-  <a class="card__pic" href="/productos/{{ item.slug.current }}">
+  <a class="card__pic" href="/desarrollos/{{ item.slug.current }}">
     <div class="card__logo"><img src="{{ item.logoImg.url }}" alt="{{ item.title }}" /></div>
     {% if item.tbImage %}
       <picture>
           {% for format, images in item.tbImage %}
-          <source srcset="{{ images | srcset }}" sizes="(max-width: 600px) 100vw, 600px" type="image/{{ format }}">
+          <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}">
           {% endfor %}
           <img src="{{ item.tbImage.webp[0].url }}" alt="{{ item.tbImageAlt }}">
       </picture>
@@ -14,7 +14,7 @@
     {% endif %}
   </a>
   <div class="card__data">
-    <a class="card__title" href="/productos/{{ item.slug.current }}">
+    <a class="card__title" href="/desarrollos/{{ item.slug.current }}">
       <span>{{ item.title }}</span>
       <span>{{ item.place }}</span>
     </a>

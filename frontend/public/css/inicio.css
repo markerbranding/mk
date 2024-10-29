@@ -173,19 +173,23 @@
     background-size: contain;
 }
 
-.titulo__habitat{
-    position: absolute;
-    width: 40vw;
-    height: 40vh;
-    top: 0;
-    right: 30vw;
-    z-index: 2;
-    margin-right: -10%;
-    background-image: url(/images/inicio/title_habitat.svg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: contain;
+#section__intro{
+    padding: 10% 10% 5%;
+    .titulo__habitat{
+        position: absolute;
+        width: 40vw;
+        height: 40vh;
+        top: 0;
+        right: 30vw;
+        z-index: 2;
+        margin-right: -10%;
+        background-image: url(/images/inicio/title_habitat.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
+
 
 #section__sliders{
     background-color: var(--color-secondary-light);
@@ -223,11 +227,12 @@
     padding: 0 0 5% 10%;
     .column__2{
         .col__left{
+            width: 35%;
             justify-content: center;
             padding-right: 5%;
         }
         .col__right{
-
+            width: 65%;
         }
     }
 }
@@ -236,10 +241,26 @@
 
 #section__recentProducts{
     background-color: var(--color-secondary-light);
-    padding: 5% 10%;
+    padding: 0% 0% 5%;
     .column__1{
-        border-top: 1px solid #00000030;
+        border-top: 0px solid #00000030;
         padding-top: 8%;
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 0px;
+            grid-auto-rows: auto;
+            li{
+                padding: 15%;
+                border-top: 1px solid #00000030;
+                border-bottom: 1px solid #00000030;
+                border-right: 1px solid #00000030;
+                &:last-child{
+                    border-right: 0px;
+                }
+            }
+        }
         .btn{
             align-self: center;
         }

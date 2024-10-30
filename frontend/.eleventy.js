@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("productos", async function(collectionApi) {
     const productosModule = require('./src/_data/products.js');
     const productos = await productosModule();
-    return productos;
+    return productos.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
   });
 
   // Colección categorías:

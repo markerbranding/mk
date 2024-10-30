@@ -7,12 +7,7 @@ layout: "base.njk"
 permalink: "/{{ page.fileSlug }}/"
 ---
 
-<div
-  data-barba="container"
-  data-barba-namespace="nosotros"
-  data-css="nosotros"
-  data-js="nosotros"
->
+<div data-barba="container" data-barba-namespace="nosotros" data-css="nosotros" data-js="nosotros">
   {% for item in nosotros %}
   <section id="section__hero" class="pad__lr__5">
     <div class="column__1">
@@ -95,4 +90,5 @@ permalink: "/{{ page.fileSlug }}/"
   </section>
 
   {% endfor %}
+  {% include 'prefooter.njk' %}
 </div>

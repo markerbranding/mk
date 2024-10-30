@@ -181,15 +181,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
             // Batch Cards
-           /* const card = document.querySelectorAll(".card");
-            if (card.length) gsap.set(card, {opacity: 0, y: 100, x: 0});
             ScrollTrigger.batch(".card", {
-                start: 'top 80%', end: 'top 80%',
-                onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, x: 0, stagger: Stagger, overwrite: true }),
-                onLeave: batch => gsap.to(batch, { opacity: 1, y: 0, x: 0, stagger: Stagger, overwrite: true }),
-                onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, x: 0, stagger: Stagger, overwrite: true }),
-                onLeaveBack: batch => gsap.to(batch, { opacity: 0, y: 100, x: 0, stagger: Stagger, overwrite: true })
-            }); */
+                trigger: "#listado__desarrollos",
+                start: "top, 70%",
+                end: "top, 60%",
+                onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+                onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+                onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+                onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
+              });
 
 
             // Batch Footer:

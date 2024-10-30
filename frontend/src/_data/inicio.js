@@ -84,6 +84,7 @@ module.exports = async function() {
         title,
         slug,
         place,
+        color{hex},
         logoImg{
           "media": asset->{url},
           "alt": asset->{altText}

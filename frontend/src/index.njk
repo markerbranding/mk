@@ -7,12 +7,7 @@ layout: "base.njk"
 permalink: "/{{ page.fileSlug }}/"
 ---
 
-<div
-  data-barba="container"
-  data-barba-namespace="inicio"
-  data-css="inicio"
-  data-js="inicio"
->
+<div data-barba="container" data-barba-namespace="inicio" data-css="inicio" data-js="inicio">
   {% for item in inicio %}
   <section id="section__hero">
     <div class="column__2 pad__lr__5">
@@ -167,7 +162,7 @@ permalink: "/{{ page.fileSlug }}/"
       </div>
       <div class="col__right">
         {% if item.intro2.intro2Img %}
-          <picture>
+          <picture data-speed="1.2">
             {% for format, images in item.intro2.intro2Img %}
             <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
             {% endfor %}
@@ -183,13 +178,13 @@ permalink: "/{{ page.fileSlug }}/"
         <h2>Proyectos más recientes</h2>
         <ul role="list">
             {% for item in item.recentProdRef.recentProducts %}
-                {% include "desarrollo-card.njk" %}
+                {% include "recent-desarrollo-card.njk" %}
             {% endfor %}
         </ul>
-        <a href="/productos/" class="btn arrow__right mar__top__5">Ver todos los desarrollos</a>
+        <a href="/productos/" class="btn btn__secondary arrow__right">Ver todos los desarrollos</a>
     </div>
   </section>
 
   {% endfor %}
+  {% include 'prefooter.njk' %}
 </div>
-

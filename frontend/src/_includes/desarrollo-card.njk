@@ -1,29 +1,32 @@
 
-<li class="card card__producto" >
-  <a class="card__pic" href="/desarrollos/{{ item.slug.current }}">
-    <div class="card__logo"><img src="{{ item.logoImg.url }}" alt="{{ item.title }}" /></div>
-    {% if item.tbImage %}
-      <picture>
-          {% for format, images in item.tbImage %}
-          <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}">
-          {% endfor %}
-          <img src="{{ item.tbImage.webp[0].url }}" alt="{{ item.tbImageAlt }}">
-      </picture>
-    {% else %}
-      <p>No hay imagen disponible para este desarrollo</p>
-    {% endif %}
-  </a>
-  <div class="card__data">
-    <a class="card__title" href="/desarrollos/{{ item.slug.current }}">
-      <span>{{ item.title }}</span>
-      <span>{{ item.place }}</span>
+<li class="card card__producto" data-speed="1.2">
+    <div data-speed="auto">
+    <a class="card__pic" href="/desarrollos/{{ item.slug.current }}">
+      <div class="card__logo"><img src="{{ item.logoImg.url }}" alt="{{ item.title }}" /></div>
+      {% if item.tbImage %}
+        <picture>
+            {% for format, images in item.tbImage %}
+            <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}">
+            {% endfor %}
+            <img src="{{ item.tbImage.webp[0].url }}" alt="{{ item.tbImageAlt }}">
+        </picture>
+      {% else %}
+        <p>No hay imagen disponible para este desarrollo</p>
+      {% endif %}
     </a>
-    {% if item.categories %}
-      {% for category in item.categories %}
-        <div class="card__category">
-          <span>{{ category }}{% if not loop.last %}, {% endif %}</span>
-        </div>
-      {% endfor %}
-    {% endif %}
+    <div class="card__data">
+      <div class="card__line" style="background-color: {{ item.color.hex }}"></div>
+      <a class="card__title" href="/desarrollos/{{ item.slug.current }}">
+        <span>{{ item.title }}</span>
+        <span>{{ item.place }}</span>
+      </a>
+      {% if item.categories %}
+        {% for category in item.categories %}
+          <div class="card__category">
+            <span>{{ category }}{% if not loop.last %}, {% endif %}</span>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </li>

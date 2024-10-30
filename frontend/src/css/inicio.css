@@ -9,7 +9,7 @@
         position: relative;
         z-index: 1;
         .col__left{
-            width: 65%;
+            width: 60%;
             h1{
                 color: var(--color-secondary);
             }
@@ -26,11 +26,12 @@
             p{
                 color: var(--color-secondary);
                 font-size: var(--size-lg);
+                line-height: 1.4;
             }
         }
     
         .col__right{
-            width: 35%;
+            width: 40%;
             align-items: center;
             justify-content: center;
         }
@@ -233,6 +234,7 @@
         }
         .col__right{
             width: 65%;
+            
         }
     }
 }
@@ -240,11 +242,14 @@
 
 
 #section__recentProducts{
-    background-color: var(--color-secondary-light);
-    padding: 0% 0% 5%;
+    background-color: var(--color-white);
+    padding: 0% 0% 50px;
     .column__1{
         border-top: 0px solid #00000030;
-        padding-top: 8%;
+        padding-top: 50px;
+        h2{
+            margin-bottom: 50px;
+        }
         ul{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -253,15 +258,16 @@
             grid-auto-rows: auto;
             li{
                 padding: 15%;
-                border-top: 1px solid #00000030;
-                border-bottom: 1px solid #00000030;
-                border-right: 1px solid #00000030;
+                border-top: 2px solid var(--color-secondary-light);
+                border-bottom: 2px solid var(--color-secondary-light);
+                border-right: 2px solid var(--color-secondary-light);
                 &:last-child{
                     border-right: 0px;
                 }
             }
         }
         .btn{
+            margin-top: 50px;
             align-self: center;
         }
     }

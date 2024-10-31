@@ -122,6 +122,13 @@ export default defineType({
       group: 'hero',
     }),
     defineField({
+      name: 'colorLight',
+      title: 'Color claro destacado del desarrollo',
+      description:'*Elegir un color claro, porque servirá de fondo para textos',
+      type: 'color',
+      group: 'hero',
+    }),
+    defineField({
       name: 'logoImg',
       title: 'Logo del desarrollo en color claro',
       type: 'image',

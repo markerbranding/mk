@@ -6,7 +6,10 @@
     display: block;
 }
 
-
+.btn__secondary{
+    background-color: var(--color-secondary);
+    color: var(--main-color-light);
+}
 
 #section__hero{
     margin-top: 0px;
@@ -22,7 +25,7 @@
         .col__left{
             position: relative;
             .cardProduct__head{
-                background-color: var(--color-accent);
+                background-color: var(--main-color-light);
                 padding: 10px 40px;
                 position: absolute;
                 top: -50px;
@@ -32,17 +35,19 @@
                     font-size: var(--size-xs);
                     font-weight: 400;
                     margin-bottom: 0px;
+                    color: var(--main-color);
                     a{
                         font-size: inherit;
                         font-weight: 500;
                         margin-bottom: 0px;
+                        color: var(--color-secondary);
                     }
                     
                 }
             }
         }
         div.cardProduct__body{
-            background-color: var(--color-accent);
+            background-color: var(--main-color-light);
             margin-top: -3px;
             display: flex;
             justify-content: space-between;
@@ -98,6 +103,7 @@
                 aspect-ratio: 1/1;
                 max-height: 200px;
                 padding: 20px;
+                background-color: var(--main-color);
                 img{
                     width: 100%;
                     height: 100%;
@@ -145,7 +151,7 @@
         top: 0;
         width: 15%;
         height: 100%;
-        background-color: var(--color-accent);
+        background-color: var(--main-color-light);
         z-index: -2;
     }
     &::before{
@@ -166,6 +172,7 @@
         h2{
             font-size: var(--size-xl);
             font-weight: 500;
+            color:var(--main-color);
         }
         a{
             text-transform: uppercase;
@@ -182,7 +189,7 @@
         top: 0;
         width: 100vw;
         height: 10%;
-        background-color: var(--color-accent);
+        background-color: var(--main-color-light);
         z-index: 1;
     }
 }
@@ -204,6 +211,7 @@
                 font-weight: 300;
                 strong{
                     font-weight: 500;
+                    color: var(--main-color);
                 }
             }
         }
@@ -227,6 +235,7 @@
         justify-content: space-between;
         h3{
             font-size: var(--size-md);
+            color: var(--main-color);
         }
         p{
             padding-right: 5%;
@@ -244,7 +253,7 @@
                 content: "+";
                 display: block;
                 font-weight: 700;
-                color: var(--color-primary);
+                color: var(--main-color-light);
                 position: absolute;
                 left: -20px;
                 top: 0;
@@ -271,14 +280,19 @@
     bottom: -3px;
     width: 100%;
     height: 50%;
-    background-image: url(/images/bg_yellow.svg);
+    /*background-image: url(/images/bg_yellow.svg);*/
+    background-color: var(--main-color-light);
     z-index: -1;
 }
 
 #section__product__amenities{
-    background-image: url(/images/bg_yellow.svg);
+    /*background-image: url(/images/bg_yellow.svg);*/
+    background-color: var(--main-color-light);
     margin: -3px 0;
     padding-bottom: 10px;
+    h2{
+        color: var(--main-color);
+    }
     ul{
         margin-top: 30px;
         padding-top: 5%;
@@ -301,10 +315,13 @@
             img{
                 max-width: 130px;
                 margin-bottom: 20px;
+                border: 5px solid var(--main-color);
+                border-radius: 26px;
             }
             h3{
                 text-align: center;
                 font-size: var(--size-sm);
+                color: var(--main-color);
             }
         }
     }
@@ -319,7 +336,8 @@
         top: -1px;
         width: 100%;
         height: 20vh;
-        background-image: url(/images/bg_yellow.svg);
+        /*background-image: url(/images/bg_yellow.svg);*/
+        background-color: var(--main-color-light);
         z-index: -1;
     }
     .column__2{
@@ -328,6 +346,9 @@
         .col__left{
             justify-content: center;
             padding-right: 5%;
+            h2{
+                color: var(--main-color);
+            }
         }
         .col__right{
             #map-container-product{
@@ -344,6 +365,9 @@
     .column__1{
         padding: 5% 0%;
         border-top: 1px solid #00000030;
+        h2{
+            color: var(--main-color);
+        }
     }
     &::after{
         content: "";

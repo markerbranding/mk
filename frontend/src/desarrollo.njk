@@ -3,6 +3,8 @@ eleventyComputed:
   title: "{{ products[0].titleseo }}"
   description: "{{ productos[0].descseo }}"
   keywords: "{{ productos[0].keyseo }}"
+  colorHex: "{{ producto.color.hex }}"
+  colorHexLight: "{{ producto.colorLight.hex }}"
 layout: base.njk
 pagination:
   data: collections.productos
@@ -10,6 +12,7 @@ pagination:
   alias: producto
 permalink: "/desarrollos/{{ producto.slug.current }}/"
 ---
+{% set colorPrincipal = producto.color.hex %}
 
 <div data-barba="container" data-barba-namespace="producto" data-css="producto" data-js="producto">
   <section id="section__hero" class="pad__lr__10">
@@ -32,7 +35,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
             <h1>{{ producto.titlePage }}</h1>
             <a id="section__product__btn__vermas">Ver más</a>
           </div>
-          <div class="width__10 body__logo" id="hero-logo-product-container" style="background-color: {{ producto.color.hex }}">
+          <div class="width__10 body__logo" id="hero-logo-product-container">
               <img src="{{ producto.logoImg.url }}"/>
           </div>
         </div>
@@ -70,7 +73,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   <section id="section__product__characteristics">
     <div class="column__2 block1">
       <div class="col__left">
-          {{ producto.characteristicsTitle | safe }}
+          <div>{{ producto.characteristicsTitle | safe }}</div>
       </div>
       <div class="col__right introImg">
         <img src="{{ producto.logoImg2.url }}"/>
@@ -162,7 +165,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
               <li class="splide__slide">
                 <picture>
                     {% for format, images in item %}
-                      <source srcset="{{ images | srcset }}" sizes="(max-width: 1200px) 100vw, 1200px" type="image/{{ format }}">
+                      <source srcset="{{ images | srcset }}" sizes="(max-width: 1920px) 100vw, 1920px" type="image/{{ format }}">
                     {% endfor %}
                     <img src="{{ item.webp[0].url }}" alt="{{ producto.gallery.altText }}">
                   </picture>
@@ -183,7 +186,6 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   // carrousel
   document.addEventListener('DOMContentLoaded', function () {
     var main = new Splide('#main-carousel', {
-      type: 'fade',
       rewind: true,
       pagination: false,
       arrows: true

@@ -6,6 +6,7 @@ module.exports = async function () {
     titleseo,
     descseo,
     color{hex},
+    colorLight{hex},
     keyseo,
     title,
     place,

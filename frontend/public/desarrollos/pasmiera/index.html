@@ -19,9 +19,11 @@
     <link rel="stylesheet" href="/css/general/footer.css">
     
     
+        
+        
     
-    
-    
+    <style>:root {--main-color: #7d3226;}</style>
+    <style>:root {--main-color-light: #dad0bb;}</style>
     
 </head>
 <body data-barba="wrapper">
@@ -126,6 +128,7 @@
         <div id="smooth-content">
             <main>
                 
+
 <div data-barba="container" data-barba-namespace="producto" data-css="producto" data-js="producto">
   <section id="section__hero" class="pad__lr__10">
     
@@ -149,7 +152,7 @@
             <h1>Lotes residenciales en Paseo Norte Tixcuytún</h1>
             <a id="section__product__btn__vermas">Ver más</a>
           </div>
-          <div class="width__10 body__logo" id="hero-logo-product-container" style="background-color: #9c4436">
+          <div class="width__10 body__logo" id="hero-logo-product-container">
               <img src="https://cdn.sanity.io/images/nprovn8b/production/bc48eacc9e774232d166c74be725ef5d73e7a304-500x500.svg"/>
           </div>
         </div>
@@ -189,7 +192,7 @@
   <section id="section__product__characteristics">
     <div class="column__2 block1">
       <div class="col__left">
-          <h2>Vive en <strong>espacios impregnados de historia</strong>, en un residencial ubicado en una de las ciudades más seguras del mundo.</h2>
+          <div><h2>Vive en <strong>espacios impregnados de historia</strong>, en un residencial ubicado en una de las ciudades más seguras del mundo.</h2></div>
       </div>
       <div class="col__right introImg">
         <img src="https://cdn.sanity.io/images/nprovn8b/production/48fcc08eecc9adc30116ae0e96adf5791ed184c5-500x500.svg"/>
@@ -307,7 +310,6 @@
   // carrousel
   document.addEventListener('DOMContentLoaded', function () {
     var main = new Splide('#main-carousel', {
-      type: 'fade',
       rewind: true,
       pagination: false,
       arrows: true

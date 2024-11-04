@@ -13,9 +13,10 @@ permalink: "/desarrollos/" # Para paginación amplia descomentar: permalink: "/p
 
 <div data-barba="container" data-barba-namespace="productos" data-css="productos" data-js="productos">
   {% for item in productos %}
-    <section id="section__hero" class="pad__lr__5">
+    <section id="section__hero">
       <div class="column__2">
-        <div class="col__left flex__justify__c pad__right__5 width__45">
+        <div class="col__left flex__justify__c width__45">
+          <h1>Proyectos inmobiliarios</h1>
           <div class='semiBold'>{{ item.heroH2 | safe }}</div>
         </div>
         <div class="col__right width__55"></div>

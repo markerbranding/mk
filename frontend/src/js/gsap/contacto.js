@@ -49,45 +49,7 @@ function gsapSoloAnimations() {
 }
 
 
-// Mapa de Google:
 
-async function initMap() {
-    // Importa solo la biblioteca de mapas.
-    const { Map } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-    const originalMapCenter = new google.maps.LatLng(21.034083725368113, -89.58524727449985);
-    const map = new Map(document.getElementById("map"), {
-        zoom: 14,
-        center: originalMapCenter,
-        mapId: "8db6d703d3e235c6",
-    });
-
-    const infowindow = new google.maps.InfoWindow({
-        content: `
-            <a href='https://google.com' style="color: #222; font-size: 16px;">Oficinas EMEKÁ</a>
-        `,
-        position: originalMapCenter,
-        pixelOffset: new google.maps.Size(0, -100) // Desplaza el InfoWindow 40 píxeles hacia arriba
-    });
-
-    infowindow.open(map);
-
-    // Añade un marcador avanzado con una imagen personalizada
-    const marker = new AdvancedMarkerElement({
-        map: map,
-        position: originalMapCenter,
-        title: "Custom Marker",
-        content: document.createElement("div")
-    });
-
-    // Configura el contenido HTML del marcador avanzado para usar la imagen
-    marker.content.innerHTML = `
-        <img src="/images/contacto_img.jpg" alt="Marker" style="width: 80px; height: 80px; background-color:#000; padding:10px;">
-    `;
-
-  }
-  
-  initMap();
 
 
 

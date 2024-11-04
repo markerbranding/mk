@@ -32,6 +32,7 @@
         .col__left{
             padding-right: 10%;
             padding-bottom: 7%;
+            width: 45%;
             h1{
                 color: var(--color-accent);
             }
@@ -48,6 +49,7 @@
             }
         }
         .col__right{
+            width: 55%;
             img{
                 position: relative;
                 z-index: 2;
@@ -74,7 +76,17 @@
         }
         .col__right{
             #form{
-                padding: 0;
+                font-size: var(--size-sm);
+                padding: 1%;
+                .column__2{
+                    .col__left{
+                        padding-right: 5%;
+                    }
+                }
+                input, select, textarea{
+                    font-size: var(--size-xs);
+                    border: 1px solid #00000030;
+                }
             }
         }
     }

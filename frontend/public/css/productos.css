@@ -2,27 +2,32 @@
   color: var(--color-black);
 }
 
-#inner__header .nav__ul.nav__ul__right li:nth-child(1) a::before {
-  display: block;
-}
-
 #section__hero {
   background-color: var(--color-secondary-light);
-  padding-top: calc(60px + 5%);
-  h1 {
-    color: var(--color-accent);
+  padding: calc(60px + 5%) 10% 5%;
+  .column__2{
+    .col__left{
+      width: 45%;
+      h1 {
+        color: var(--color-accent);
+      }
+      h2 {
+        color: var(--color-black);
+      }
+      h2 strong {
+        color: var(--color-primary-light);
+        font-weight: unset;
+      }
+      p {
+        color: var(--color-white);
+        font-size: var(--size-md);
+      }
+    }
+    .col__right{
+      width: 55%;
+    }
   }
-  h2 {
-    color: var(--color-black);
-  }
-  h2 strong {
-    color: var(--color-primary-light);
-    font-weight: unset;
-  }
-  p {
-    color: var(--color-white);
-    font-size: var(--size-md);
-  }
+  
 }
 
 .hide__category .card__category {

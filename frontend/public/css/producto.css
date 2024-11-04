@@ -1,8 +1,8 @@
-#inner__header .nav__ul.nav__ul__right li:nth-child(1) a{
+#inner__header .nav__ul.nav__ul__left li:nth-child(2) a{
     color: var(--color-primary);
 }
 
-#inner__header .nav__ul.nav__ul__right li:nth-child(1) a::before{
+#inner__header .nav__ul.nav__ul__left li:nth-child(2) a::before{
     display: block;
     background-color: var(--color-primary);
 }
@@ -30,7 +30,7 @@ header{
 
 #section__hero{
     margin-top: 0px;
-    background-color: var(--color-secondary);
+    background-color: var(--main-color);
     position: relative;
     z-index: 1;
     min-height: 100vh;

@@ -1,9 +1,26 @@
 #inner__header .nav__ul.nav__ul__right li:nth-child(1) a{
-    color: var(--color-black);
+    color: var(--color-primary);
 }
 
 #inner__header .nav__ul.nav__ul__right li:nth-child(1) a::before{
     display: block;
+    background-color: var(--color-primary);
+}
+
+header{
+    background-color: var(--color-secondary);
+}
+
+.nav__ul li a{
+    color: var(--color-primary);
+}
+
+.nav__ul li a:hover{
+    color: var(--color-white);
+}
+
+#logo__main img{
+    filter: invert(1);
 }
 
 .btn__secondary{
@@ -180,6 +197,7 @@
         .brochure{
             font-size: var(--size-xs);
             text-decoration: underline;
+            color: var(--main-color);
         }
     }
     .col__right::after{
@@ -239,6 +257,9 @@
         }
         p{
             padding-right: 5%;
+        }
+        .especificacion__wrapper{
+            width: 100%;
         }
         ul{
             padding-left: 10%;
@@ -404,15 +425,28 @@
     
     #thumbnail-carousel {
         width: 100%;
+        margin-top: 12px;
         ul{
             justify-content: center;
             li{
                 width: 100% !important;
                 max-width: 200px !important;
-                height: 100px !important;
+                height: auto !important;
+                picture{
+                    height: 100%;
+                    img{
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
             }
         }
     }
+}
+
+
+.splide__track--nav>.splide__list>.splide__slide.is-active{
+    border-color: var(--main-color-light) !important;
 }
 
 

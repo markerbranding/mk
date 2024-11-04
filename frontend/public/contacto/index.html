@@ -52,8 +52,8 @@
         </li>
     
         <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
+            <a href="/desarrollos/" class="" >
+                Desarrollos
             </a>
         </li>
     
@@ -67,8 +67,8 @@
         <ul role="list" class="nav__ul nav__ul__right">
     
         <li>
-            <a href="/desarrollos/" class="" >
-                Desarrollos
+            <a href="/nosotros/" class="" >
+                Nosotros
             </a>
         </li>
     
@@ -96,8 +96,8 @@
         </li>
     
         <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
+            <a href="/desarrollos/" class="" >
+                Desarrollos
             </a>
         </li>
     
@@ -105,8 +105,8 @@
         <ul role="list" class="nav__ul nav__ul__right">
     
         <li>
-            <a href="/desarrollos/" class="" >
-                Desarrollos
+            <a href="/nosotros/" class="" >
+                Nosotros
             </a>
         </li>
     
@@ -131,23 +131,165 @@
   
     <section id="section__hero" class="pad__lr__5 fadeInOut">
       <div class="column__2">
-        <div class="col__left flex__justify__c pad__right__5 width__45">            
+        <div class="col__left flex__justify__c">
+          <h1>Contacta con nosotros</h1>
           <div class="semiBold"><h2>Creamos comunidades que viven en armonía con el medio ambiente</h2></div>
+          <a class="btn">Ver datos de contacto</a>
         </div>
-        <div class="col__right width__55"></div>
+        <div class="col__right">
+          <img src="/images/contacto_img.jpg" data-speed="1.1" />
+        </div>
       </div>
     </section>
 
-    <section id='section__map' class='pad__all__5 fadeInOut'>
-      <div class="column__1">
-        <div id="map-container" data-map-iframe="&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3724.231092405869!2d-89.57863742474355!3d21.023437480624512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAxJzI0LjQiTiA4OcKwMzQnMzMuOCJX!5e0!3m2!1sen!2smx!4v1727380960085!5m2!1sen!2smx&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;/iframe&gt;"></div>
+    <section id="section__data__contact">
+      <div class="column__2">
+          <div class="col__left pad__right__5">
+              <h3 class="subtitle">Datos de contacto</h3>
+              <h2>Estamos para ayudarte</h2>
+              <ul role="list" class="infoList">
+                  
+                  <li class="flex flex__col">
+                      <h4>Teléfono</h4>
+                      <a class="tel__text" href="tel:9999704202">9999704202</a>
+                  </li>
+                  <li class="flex flex__col">
+                      <h4>Correo Electrónico</h4>
+                      <a href="mailto:contacto@emeka.mx">contacto@emeka.mx</a>
+                  </li>
+                  <li class="flex flex__col">
+                      <h4>Oficinas</h4>
+                      <a href="https://www.google.com/maps/place/Emek%C3%A1+Desarrollos/@21.0233011,-89.5773149,18.03z/data=!4m6!3m5!1s0x274ea09b1e7d776b:0xf5c0e3283e738df3!8m2!3d21.0233661!4d-89.5762124!16s%2Fg%2F11y5qdfwny?entry=ttu&amp;g_ep=EgoyMDI0MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Calle 7 No. 401 x 18 y 20. Fraccionamiento Altabrisa. C.P. 97134. Mérida, Yucatán, México</a>
+                  </li>
+                  
+              </ul>
+          </div>
+          <div class="col__right">
+              <form id='form' class="column__1 flex__justify__c form" method="post" action="/submit-form" onsubmit="return validateForm()">
+    <div class="column__2 width__100 pad__bottom__2">
+        <div class="col__left pad__right__5">
+            <label for="nombre" class="width__100">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" class="width__100 pad__all__2" required>
+        </div>
+        <div class="col__right">
+            <label for="telefono" class="width__100">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" class="width__100 pad__all__2" required>
+        </div>
+    </div>
+    <div class="column__2 width__100 pad__bottom__2">
+        <div class="col__left pad__right__5">
+            <label for="email" class="width__100">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" class="width__100 pad__all__2" required>
+        </div>
+        <div class="col__right">
+            <label for="ciudad" class="width__100">Ciudad / Estado:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ingresa tu ciudad" class="width__100 pad__all__2" required>
+        </div>
+    </div>
+    <div class="column__2 width__100 pad__bottom__2">
+        <div class="col__left pad__right__5">
+            <label for="desarrollo-interes" class="width__100">Interes en:</label>
+            <select id="desarrollo-interes" name="desarrollo-interes" class="width__100 pad__all__2" required>
+                <option value="">Selecciona una opción</option>
+                <option value="opcion1">Inversión de capital</option>
+                <option value="opcion2">Comprar en uno de sus desarrollos</option>
+                <option value="opcion3">Deseo ser contactado por un asesor</option>
+            </select>
+        </div>
+        <div class="col__right">
+            <label for="donde-supiste" class="width__100">Cómo supiste de nosotros:</label>
+            <select id="donde-supiste" name="donde-supiste" class="width__100 pad__all__2" required>
+                <option value="">Selecciona una opción</option>
+                <option value="opcion1">A través de búsqueda en Google</option>
+                <option value="opcion2">Desde Instagram</option>
+                <option value="opcion3">Desde Facebook</option>
+                <option value="opcion4">Por referencia de un conocido</option>
+                <option value="opcion5">He comprado antes con ustedes</option>
+            </select>
+        </div>
+    </div>
+    <label for="comentarios" class="width__100">Comentarios (opcional):</label>
+    <textarea id="comentarios" name="comentarios" placeholder="Ingresa tus comentarios" class="width__100 pad__all__2  pad__bottom__2"></textarea>
+    <button type="submit" class="btn btn__secondary" style="margin-top: 20px;">Enviar mensaje</button>
+</form>
+
+<script>
+    function validateForm() { // Sanitize user input
+        var nombre = document
+            .getElementById("nombre")
+            .value
+            .trim();
+        var telefono = document
+            .getElementById("telefono")
+            .value
+            .trim();
+        var email = document
+            .getElementById("email")
+            .value
+            .trim();
+        var ciudad = document
+            .getElementById("ciudad")
+            .value
+            .trim();
+        var desarrolloInteres = document
+            .getElementById("desarrollo-interes")
+            .value
+            .trim();
+        var etapaDecision = document
+            .getElementById("donde-supiste")
+            .value
+            .trim();
+        var comentarios = document
+            .getElementById("comentarios")
+            .value
+            .trim();
+        // Check for script injection
+        if (
+            /<[^>]+>/.test(nombre) ||
+            /<[^>]+>/.test(telefono) ||
+            /<[^>]+>/.test(email) ||
+            /<[^>]+>/.test(ciudad) ||
+            /<[^>]+>/.test(desarrolloInteres) ||
+            /<[^>]+>/.test(dondeSupiste) ||
+            /<[^>]+>/.test(comentarios)
+        ) {
+            alert("No se permiten etiquetas HTML en los campos del formulario.");
+            return false;
+        }
+        // Submit the form
+        return true;
+    }
+</script>
+          </div>
+      </div>
+  </section>
+
+    <section id='section__map'>
+      <div class="column__1 column__top">
+        <h3 class="subtitle">Ubicación</h3>
+        <h2>Nuestras oficinas</h2>
+      </div>
+      <div class="column__1 column__map">
+
+        
+
+        <div id="map"></div>
+
+        <!-- prettier-ignore -->
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyCr0REew24oldKBiKHY6vrNlflzkIYIhQY", v: "weekly"});</script>
+        
+
         <a class='btn btn__secondary'>Abrir en google maps</a>
       </div>
     </section>
+
+
   
 </div>
 
 <script>
+  /*
 document.addEventListener('DOMContentLoaded', function() {
   const mapContainer = document.getElementById('map-container');
   const iframeString = mapContainer.getAttribute('data-map-iframe');
@@ -181,6 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+*/
 </script>
             </main>
             <footer>
@@ -196,16 +339,16 @@ document.addEventListener('DOMContentLoaded', function() {
         </li>
     
         <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
+            <a href="/desarrollos/" class="" >
+                Desarrollos
             </a>
         </li>
     
 </ul> <ul role="list" class="nav__ul nav__ul__right">
     
         <li>
-            <a href="/desarrollos/" class="" >
-                Desarrollos
+            <a href="/nosotros/" class="" >
+                Nosotros
             </a>
         </li>
     

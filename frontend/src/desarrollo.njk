@@ -86,7 +86,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
       </div>
       <div class="col__right">
         <h3 class="subtitle">Especificaciones</h3>
-        <div>
+        <div class="especificacion__wrapper">
           {{ producto.characteristicsSpecifications | safe }}
         </div>
       </div>
@@ -165,7 +165,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
               <li class="splide__slide">
                 <picture>
                     {% for format, images in item %}
-                      <source srcset="{{ images | srcset }}" sizes="(max-width: 1920px) 100vw, 1920px" type="image/{{ format }}">
+                      <source srcset="{{ images | srcset }}" sizes="(max-width: 300px) 100vw, 300px" type="image/{{ format }}">
                     {% endfor %}
                     <img src="{{ item.webp[0].url }}" alt="{{ producto.gallery.altText }}">
                   </picture>

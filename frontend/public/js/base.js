@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     
-    gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,DrawSVGPlugin,ScrollSmoother,SplitText);
+    gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,DrawSVGPlugin,ScrollSmoother,SplitText, Draggable, InertiaPlugin);
 
     
     // Verifica si existe un contenedor de Barba en la carga inicial

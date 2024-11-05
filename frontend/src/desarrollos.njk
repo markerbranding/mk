@@ -19,7 +19,9 @@ permalink: "/desarrollos/" # Para paginación amplia descomentar: permalink: "/p
           <h1>Proyectos inmobiliarios</h1>
           <div class='semiBold'>{{ item.heroH2 | safe }}</div>
         </div>
-        <div class="col__right width__55"></div>
+        <div class="col__right width__55">
+          <img src="/images/proyectos/boceto.svg" height="400" />
+        </div>
       </div>
     </section>
   {% endfor %}
@@ -47,4 +49,5 @@ permalink: "/desarrollos/" # Para paginación amplia descomentar: permalink: "/p
         {% endif %}
       </ul>
   </nav> -->
+  {% include 'prefooter.njk' %}
 </div>

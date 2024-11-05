@@ -50,32 +50,36 @@ function gsapSoloAnimations() {
     });
 
     gsap.set(".st0", { drawSVG: "0%" });
-    gsap.set(".edificio", { opacity: 0 });
+    gsap.set(".edificio", { css: { 'filter': 'grayscale(100%)','-webkit-filter': 'grayscale(0%)', opacity:0 } });
+    gsap.set(".nube", { opacity: 0 });
 
     function dibuja() {
-        gsap.to(".st0", { drawSVG: "100%", stagger: 0.002 });
+        gsap.to(".st0", { drawSVG: "100%", stagger: 0.010 });
     }
     function borra() {
         gsap.to(".st0", { drawSVG: "0%", duration: 0.5 });
     }
 
+
     function aparece() {
-        gsap.to(".edificio", { opacity: 0.4, duration: 1 });
+        gsap.to(".edificio", { css: { opacity: 1 }, duration: 2 });
     }
     function desaparece() {
-        gsap.to(".edificio", { opacity: 0, duration: 1 });
+        gsap.to(".edificio", { css: { opacity: 0 }, duration: 1 });
     }
 
+
     function color() {
-        gsap.to(".edificio", { css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity: 1 } });
+        gsap.to(".edificio", { css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)' } });
     }
     function grayscale() {
-        gsap.to(".edificio", { css: { 'filter': 'grayscale(100%)','-webkit-filter': 'grayscale(100%)', opacity: 0.4 } });
+        gsap.to(".edificio", { css: { 'filter': 'grayscale(100%)','-webkit-filter': 'grayscale(0%)' } });
     }
     
     ScrollTrigger.create({
+        immediateRender: false,
         trigger:".info__top",
-        start: "top 70%",
+        start: "top 40%",
         end: "bottom 50%",
         onEnter: dibuja,
         onLeave: borra,
@@ -84,9 +88,10 @@ function gsapSoloAnimations() {
     });
     
     ScrollTrigger.create({
+        immediateRender: false,
         trigger:".info__top",
-        start: "50% 50%",
-        end: "bottom 50%",
+        start: "30% 50%",
+        end: "top 50%",
         endTrigger: ".info__bottom",
         onEnter: aparece,
         onLeave: aparece,
@@ -95,8 +100,9 @@ function gsapSoloAnimations() {
     });
 
     ScrollTrigger.create({
-        trigger:".info__bottom",
-        start: "top 50%",
+        immediateRender: false,
+        trigger:".info__top",
+        start: "bottom 50%",
         end: "bottom 50%",
         endTrigger: ".info__bottom",
         onEnter: color,
@@ -104,6 +110,77 @@ function gsapSoloAnimations() {
         onEnterBack: color,
         onLeaveBack: grayscale,
     });
+
+    ScrollTrigger.batch(".edificio__pic", {
+        immediateRender: false,
+        trigger:".info__top",
+        start: "20% 50%",
+        end: "top 50%",
+        endTrigger: ".info__bottom",
+        onEnter: (batch) =>	gsap.to(batch, { opacity: 0.4 }),
+		onLeave: (batch) =>	gsap.to(batch, { opacity: 1 }),
+        onEnterBack: (batch) =>	gsap.to(batch, { opacity: 0.4 }),
+		onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0.4 }),
+    });
+
+    ScrollTrigger.batch(".nube", {
+        immediateRender: false,
+        trigger:".info__top",
+        start: "20% 50%",
+        end: "top 50%",
+        endTrigger: ".info__bottom",
+        onEnter: (batch) =>	gsap.to(batch, { opacity: 0 }),
+		onLeave: (batch) =>	gsap.to(batch, { opacity: 1 }),
+        onEnterBack: (batch) =>	gsap.to(batch, { opacity: 0 }),
+		onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0 }),
+    });
+
+    gsap.to(".nube1", {
+        x: 150,
+        y: 30,
+        ease: "power1.out",
+        scrollTrigger:{
+            trigger:".info__bottom",
+            start: "top 50%",
+            end: "bottom 50%",
+            endTrigger: ".info__bottom",
+            scrub: 1,
+        },
+    })
+
+    gsap.to(".nube2", {
+        x: 70,
+        y: 30,
+        ease: "power1.out",
+        scrollTrigger:{
+            trigger:".info__bottom",
+            start: "top 50%",
+            end: "bottom 50%",
+            endTrigger: ".info__bottom",
+            scrub: 1,
+        },
+    })
+
+    gsap.to(".titulo__creamos", {
+        x: 150,
+        scrollTrigger: {
+            trigger: "#section__hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: 1,
+        }
+    })
+
+    gsap.to(".titulo__habitat", {
+        x: -150,
+        scrollTrigger: {
+            trigger: "#section__hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: 1,
+            markers: true,
+        }
+    })
 
     // Testimonios Drag:
     Draggable.create(".draggable", {

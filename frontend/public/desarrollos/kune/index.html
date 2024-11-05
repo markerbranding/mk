@@ -33,7 +33,7 @@
     <div id="progress"></div>
     <div id="progress__bg"></div>
     <div id="logoloader">
-        <img src="/images/sello.svg" height="50" />
+        <img src="/images/emeka_sello_amarillo.svg" height="100" />
     </div>
 </div>
 <div class="transition__top"></div>
@@ -499,7 +499,127 @@
       </div>
     </div>
   </section>
-  
+  <section id="section__prefooter">
+    <div class="column__2">
+        <div class="col__left pad__right__5">
+            <h3 class="subtitle">contacto</h3>
+            <h2>Entremos en contacto</h2>
+            <ul role="list" class="infoList">
+                
+                <li class="flex flex__col">
+                    <h4>Teléfono</h4>
+                    <a class="tel__text" href="tel:9999704202">9999704202</a>
+                </li>
+                <li class="flex flex__col">
+                    <h4>Correo Electrónico</h4>
+                    <a href="mailto:contacto@emeka.mx">contacto@emeka.mx</a>
+                </li>
+                <li class="flex flex__col">
+                    <h4>Oficinas</h4>
+                    <a href="https://maps.app.goo.gl/FTdE4ooz3BPMq2D99" target="_blank">Plaza Puerta Copó, Periférico Lic. Manuel Berzunza 11, Santa Gertrudis Copo, 97130 Mérida, Yucatán</a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="col__right">
+            <form id='form' class="column__1 flex__justify__c form" method="post" action="/submit-form" onsubmit="return validateForm()">
+    <div class="column__2 width__100 pad__bottom__2">
+        <div class="col__left pad__right__5">
+            <label for="nombre" class="width__100">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" class="width__100 pad__all__2" required>
+        </div>
+        <div class="col__right">
+            <label for="telefono" class="width__100">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" class="width__100 pad__all__2" required>
+        </div>
+    </div>
+    <div class="column__2 width__100 pad__bottom__2">
+        <div class="col__left pad__right__5">
+            <label for="email" class="width__100">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" class="width__100 pad__all__2" required>
+        </div>
+        <div class="col__right">
+            <label for="ciudad" class="width__100">Ciudad / Estado:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ingresa tu ciudad" class="width__100 pad__all__2" required>
+        </div>
+    </div>
+    <div class="column__2 width__100 pad__bottom__2">
+        <div class="col__left pad__right__5">
+            <label for="desarrollo-interes" class="width__100">Interes en:</label>
+            <select id="desarrollo-interes" name="desarrollo-interes" class="width__100 pad__all__2" required>
+                <option value="">Selecciona una opción</option>
+                <option value="opcion1">Inversión de capital</option>
+                <option value="opcion2">Comprar en uno de sus desarrollos</option>
+                <option value="opcion3">Deseo ser contactado por un asesor</option>
+            </select>
+        </div>
+        <div class="col__right">
+            <label for="donde-supiste" class="width__100">Cómo supiste de nosotros:</label>
+            <select id="donde-supiste" name="donde-supiste" class="width__100 pad__all__2" required>
+                <option value="">Selecciona una opción</option>
+                <option value="opcion1">A través de búsqueda en Google</option>
+                <option value="opcion2">Desde Instagram</option>
+                <option value="opcion3">Desde Facebook</option>
+                <option value="opcion4">Por referencia de un conocido</option>
+                <option value="opcion5">He comprado antes con ustedes</option>
+            </select>
+        </div>
+    </div>
+    <label for="comentarios" class="width__100">Comentarios (opcional):</label>
+    <textarea id="comentarios" name="comentarios" placeholder="Ingresa tus comentarios" class="width__100 pad__all__1  pad__bottom__2"></textarea>
+    <button type="submit" class="btn btn__secondary" style="margin-top: 20px;">Enviar mensaje</button>
+</form>
+
+<script>
+    function validateForm() { // Sanitize user input
+        var nombre = document
+            .getElementById("nombre")
+            .value
+            .trim();
+        var telefono = document
+            .getElementById("telefono")
+            .value
+            .trim();
+        var email = document
+            .getElementById("email")
+            .value
+            .trim();
+        var ciudad = document
+            .getElementById("ciudad")
+            .value
+            .trim();
+        var desarrolloInteres = document
+            .getElementById("desarrollo-interes")
+            .value
+            .trim();
+        var etapaDecision = document
+            .getElementById("donde-supiste")
+            .value
+            .trim();
+        var comentarios = document
+            .getElementById("comentarios")
+            .value
+            .trim();
+        // Check for script injection
+        if (
+            /<[^>]+>/.test(nombre) ||
+            /<[^>]+>/.test(telefono) ||
+            /<[^>]+>/.test(email) ||
+            /<[^>]+>/.test(ciudad) ||
+            /<[^>]+>/.test(desarrolloInteres) ||
+            /<[^>]+>/.test(dondeSupiste) ||
+            /<[^>]+>/.test(comentarios)
+        ) {
+            alert("No se permiten etiquetas HTML en los campos del formulario.");
+            return false;
+        }
+        // Submit the form
+        return true;
+    }
+</script>
+        </div>
+    </div>
+</section>
 </div>
 
 
@@ -645,7 +765,7 @@
     
     <div class="footer__column">
       
-        <a class="logo__footer" href="/">
+        <a class="z" href="/">
           <img src="https://cdn.sanity.io/images/nprovn8b/production/a7bbe9527d944f6a28dfbcb0a016222d68fcfb51-189x189.svg" alt="EMEKÁ - Desarrollo inmobiliario"/>
         </a>
        

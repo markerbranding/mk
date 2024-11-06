@@ -43,7 +43,9 @@ module.exports = async function () {
     introTitle,
     introRichText,
     introProductWeb,
-    introProductBrochure,
+    introProductBrochure{
+      "url": asset->{url},
+    },
     logoImg{
       "media": asset->{url},
       "alt": asset->{altText}

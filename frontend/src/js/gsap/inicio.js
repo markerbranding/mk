@@ -69,6 +69,11 @@ function gsapSoloAnimations() {
     },
   });
 
+
+  let mm = gsap.matchMedia();
+  // Desktop
+  mm.add("(min-width: 1025px)", () => {
+
   // Hero
 
   gsap.to(".img__hero", {
@@ -121,6 +126,8 @@ function gsapSoloAnimations() {
       scrub: true,
     },
   });
+
+
   gsap.to(".intro__slider1", {
     x: 0,
     scrollTrigger: {
@@ -139,4 +146,106 @@ function gsapSoloAnimations() {
       scrub: true,
     },
   });
+
+});
+
+// Mobile
+mm.add("(max-width: 1024px)", () => {
+
+  let heroCol2 = gsap.getProperty("#section__hero > .column__2", "height");
+  let heroCol1 = gsap.getProperty(".img__hero", "height");
+  const alturaCol1y2 = heroCol1 + heroCol2;
+  console.log(alturaCol1y2);
+  console.log(heroCol1);
+  console.log(heroCol2);
+
+  gsap.to(".img__hero", {
+    scrollTrigger: {
+      trigger: ".img__hero",
+      start: "top 60",
+      end: "+=160%",
+      endTrigger: ".column__3",
+      scrub: true,
+      pin: ".img__hero",
+      pinSpacing: false,
+    },
+  });
+
+  gsap.to(".heroGalleryTL", {
+    scrollTrigger: {
+      trigger: ".img__hero",
+      start: "top 0",
+      end: "bottom 0",
+      endTrigger: "#section__hero .column__3 .col__left .heroGallery:last-child",
+      scrub: true,
+      pin: "#section__hero .column__3 .col__left .heroGallery:first-child",
+      pinSpacing: false,
+      markers: true,
+    },
+  });
+
+
+
+  gsap.to("#video__inicio", {
+    clipPath: "circle(100% at 50% 50%)",
+    scrollTrigger: {
+      trigger: ".vid__hero",
+      start: "top 0%",
+      end: "bottom 100%",
+      endTrigger: ".vid__hero",
+      scrub: true,
+      pin: "#video__inicio",
+      pinSpacing: false,
+    },
+  });
+
+  gsap.to(".sello", {
+    scrollTrigger: {
+      trigger: "#section__hero",
+      start: "top top",
+      end: "bottom bottom",
+      pin: ".sello",
+      pinSpacing: true,
+      scrub: true,
+    },
+  });
+
+  gsap.to(".sello", {
+    scale: 1,
+    opacity: 1,
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: "#section__hero .column__3",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+
+  gsap.to(".intro__slider1", {
+    x: 0,
+    scrollTrigger: {
+      trigger: ".intro__slider1",
+      start: "top 100%",
+      end: "bottom 0%",
+      scrub: true,
+    },
+  });
+  gsap.to(".intro__slider2", {
+    x: 0,
+    scrollTrigger: {
+      trigger: ".intro__slider2",
+      start: "top 100%",
+      end: "bottom 0%",
+      scrub: true,
+    },
+  });
+
+
+
+}); //Cierre mobile
+
+
+
 }

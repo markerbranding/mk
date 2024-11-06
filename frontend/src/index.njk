@@ -38,7 +38,7 @@ permalink: "/{{ page.fileSlug }}/"
     <div class="column__3">
       <div class="col__left">
         {% if item.heroGallery1 %}
-        <picture class="heroGallery">
+        <picture class="heroGallery heroGalleryTL">
           {% for format, images in item.heroGallery1 %}
           <source
             srcset="{{ images | srcset }}"
@@ -49,7 +49,7 @@ permalink: "/{{ page.fileSlug }}/"
           <img src="{{ item.heroGallery1.jpeg[0].url }}" />
         </picture>
         {% endif %} {% if item.heroGallery2 %}
-        <picture class="heroGallery">
+        <picture class="heroGallery heroGalleryBL">
           {% for format, images in item.heroGallery2 %}
           <source
             srcset="{{ images | srcset }}"
@@ -64,7 +64,7 @@ permalink: "/{{ page.fileSlug }}/"
       <div class="col__center"></div>
       <div class="col__right">
         {% if item.heroGallery3 %}
-        <picture class="heroGallery">
+        <picture class="heroGallery heroGalleryTR">
           {% for format, images in item.heroGallery3 %}
           <source
             srcset="{{ images | srcset }}"
@@ -75,7 +75,7 @@ permalink: "/{{ page.fileSlug }}/"
           <img src="{{ item.heroGallery3.jpeg[0].url }}" />
         </picture>
         {% endif %} {% if item.heroGallery4 %}
-        <picture class="heroGallery">
+        <picture class="heroGallery heroGalleryBR">
           {% for format, images in item.heroGallery4 %}
           <source
             srcset="{{ images | srcset }}"
@@ -159,6 +159,7 @@ permalink: "/{{ page.fileSlug }}/"
       <div class="col__left">
         <h2>{{ item.intro2.intro2Title | safe }}</h2>
           {{ item.intro2.intro2RichText | safe }}
+          <a href="/nosotros/" class="btn">Más de nuestro enfoque</a>
       </div>
       <div class="col__right">
         {% if item.intro2.intro2Img %}

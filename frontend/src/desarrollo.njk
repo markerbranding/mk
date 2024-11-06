@@ -64,7 +64,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
         <a href="{{ producto.introProductWeb }}" class="btn btn__secondary" target="_blank">Abrir sitio web de {{ producto.title }}</a>
         {% endif %}
         {% if producto.introProductBrochure %}
-        <a class="brochure" href="{{ producto.introProductBrochure }}" target="_blank">Descargar brochure de {{ producto.title }}</a>
+        <a class="brochure" href="{{ producto.introProductBrochure.url.url }}" target="_blank">Descargar brochure de {{ producto.title }}</a>
         {% endif %}
       </div>
     </div>
@@ -152,7 +152,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
               const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
               const originalMapCenter = new google.maps.LatLng({{ producto.latitud }}, {{ producto.longitud }});
               const map = new Map(document.getElementById("map"), {
-                  zoom: 15,
+                  zoom: 13,
                   center: originalMapCenter,
                   mapId: "8db6d703d3e235c6",
               });

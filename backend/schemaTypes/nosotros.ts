@@ -77,7 +77,7 @@ export default {
         },
         {
             name: 'heroImg',
-            title: 'Imagen principal',
+            title: 'Imagen para el cierre de la sección',
             type: 'image',
             group: 'hero',
             options: {

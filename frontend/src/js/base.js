@@ -164,14 +164,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const h2Elements = document.querySelectorAll(".fadeInOut h2");
             const h3Elements = document.querySelectorAll(".fadeInOut h3");
             const pElements = document.querySelectorAll(".fadeInOut p");
+            const ulElements = document.querySelectorAll(".fadeInOut ul");
             const imgElements = document.querySelectorAll(".fadeInOut img");
             // Condicional en caso de que existan
             if (h2Elements.length) gsap.set(h2Elements, {opacity: 0, x: -50});
             if (h3Elements.length) gsap.set(h3Elements, {opacity: 0, x: -50});
             if (pElements.length) gsap.set(pElements, {opacity: 0, y: 50});
+            if (ulElements.length) gsap.set(pElements, {opacity: 0, y: 50});
             if (imgElements.length) gsap.set(imgElements, {opacity: 0, y: 50});
 
-            ScrollTrigger.batch([".fadeInOut h3", ".fadeInOut h2", ".fadeInOut p", ".fadeInOut img"], {
+            ScrollTrigger.batch([".fadeInOut h3", ".fadeInOut h2", ".fadeInOut p", ".fadeInOut ul", ".fadeInOut img"], {
                 start: 'top 80%', end: 'top 80%',
                 onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, x: 0, stagger: Stagger, overwrite: true }),
                 onLeave: batch => gsap.to(batch, { opacity: 1, y: 0, x: 0, stagger: Stagger, overwrite: true }),
@@ -201,6 +203,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 onEnterBack: batch => gsap.to(batch, { opacity: 1, x: 0, stagger: Stagger, overwrite: true }),
                 onLeaveBack: batch => gsap.to(batch, { opacity: 0, x: -50, stagger: Stagger, overwrite: true })
             });
+
+            
+            
+            gsap.from("#form", {
+                opacity: 0,
+                x: 100, ease: "power1.out",
+                scrollTrigger: {
+                    trigger: "#section__prefooter",
+                    start: "top 50%",
+                    end: "40 50%",
+                    scrub: 1,
+                }
+            })
 
                 // TERMINA GSAP GLOBAL ESCRITORIO
 

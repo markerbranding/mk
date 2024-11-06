@@ -70,6 +70,8 @@ module.exports = async function () {
     },
     mapTitle,
     mapRichText,
+    latitud,
+    longitud,
     mapLink,
     map,
 }`);

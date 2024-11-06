@@ -58,11 +58,16 @@ export default {
         '*Agregar texto con formato H2. (Opcional: para resaltar palabras importantes se puede poner en negritas)',
     },
     {
-      name: 'map',
-      title: 'Mapa del lugar',
-      description: 'Puede usar el iframe de google maps para visualizar el mapa',
-      type: 'text',
-      group: 'map',
+      name: 'latitud',
+      title: 'Latitud de las oficinas en Google Maps',
+      type: 'string',
+      group: 'hero',
+    },
+    {
+      name: 'longitud',
+      title: 'Longitud de las oficinas en Google Maps',
+      type: 'string',
+      group: 'hero',
     },
   ],
 }

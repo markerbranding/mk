@@ -178,7 +178,6 @@ function gsapSoloAnimations() {
             start: "top top",
             end: "bottom top",
             scrub: 1,
-            markers: true,
         }
     })
 

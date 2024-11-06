@@ -186,12 +186,6 @@ export default defineType({
       group: 'product',
     }),
     defineField({
-      name: 'body',
-      title: 'Descripción del producto',
-      type: 'blockContent',
-      group: 'product',
-    }),
-    defineField({
       name: 'characteristicsTitle',
       title: 'Frase llamativa del desarrollo',
       type: 'blockContent',
@@ -278,6 +272,18 @@ export default defineType({
     defineField({
       name: 'mapLink',
       title: 'Link de google maps del mapa',
+      type: 'string',
+      group: 'location',
+    }),
+    defineField({
+      name: 'latitud',
+      title: 'Pegar la latitud del Google Maps',
+      type: 'string',
+      group: 'location',
+    }),
+    defineField({
+      name: 'longitud',
+      title: 'Pegar la longitud del Google Maps',
       type: 'string',
       group: 'location',
     }),

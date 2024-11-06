@@ -43,5 +43,10 @@ function gsapSoloAnimations() {
         duration: 0.8,
         ease: "power1.out"
     }, "-=0.8")
+    .from(".st1", {
+        drawSVG: "0%",
+        stagger: 0.010,
+        duration: 1,
+    }, "-=1.2")
 
 }

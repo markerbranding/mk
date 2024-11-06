@@ -14,7 +14,8 @@ module.exports = async function() {
       "media": asset->{url},
       "alt": asset->{altText}
     },
-    map,
+    latitud,
+    longitud,
   }`);
 
   await Promise.all(data.map(processContent)); // Procesa todo el contenido en cada objeto

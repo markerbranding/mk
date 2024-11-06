@@ -53,13 +53,13 @@ export default defineConfig({
                       .id('about')
                       .child(S.document().schemaType('nosotros').documentId('nosotros')),
                     S.listItem()
-                      .title('Productos')
+                      .title('Desarrollos')
                       .id('productos')
                       .child(S.document().schemaType('productos').documentId('productos')),
-                    S.listItem()
+                    /*S.listItem()
                       .title('Artículos')
                       .id('blog')
-                      .child(S.document().schemaType('blog').documentId('blog')),
+                      .child(S.document().schemaType('blog').documentId('blog')),*/
                     S.listItem()
                       .title('Contacto')
                       .id('contact')
@@ -82,7 +82,7 @@ export default defineConfig({
                       .child(S.documentTypeList('category').title('Categorías')),
                   ])
               ),
-            S.listItem()
+            /*S.listItem()
               .title('Lista de artículos de blog')
               .child(
                 S.list()
@@ -101,12 +101,12 @@ export default defineConfig({
                       .schemaType('author')
                       .child(S.documentTypeList('author').title('Autores')),
                   ])
-              ),
+              ),*/
             // Filtrar los elementos de la lista
             ...S.documentTypeListItems().filter(
               (listItem) => {
                 const id = listItem.getId();
-                return id && !['inicio', 'nosotros', 'productos', 'blog', 'contact', 'aviso', 'empresa', 'social', 'products', 'category', 'author', 'post', 'post-category'].includes(id);
+                return id && !['inicio', 'nosotros', 'productos', /*'blog', */'contact', 'aviso', 'empresa', 'social', 'products', 'category'/*, 'author', 'post', 'post-category'*/].includes(id);
               }
             ),
           ]),

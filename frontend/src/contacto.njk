@@ -56,7 +56,7 @@ permalink: "/{{ page.fileSlug }}/"
       </div>
       <div class="column__1 column__map">
 
-        {% for item in empresa %}
+        {% for link in empresa %}
 
         <div id="map"></div>
 
@@ -70,7 +70,7 @@ permalink: "/{{ page.fileSlug }}/"
               // Importa solo la biblioteca de mapas.
               const { Map } = await google.maps.importLibrary("maps");
               const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-              const originalMapCenter = new google.maps.LatLng(21.034083725368113, -89.58524727449985);
+              const originalMapCenter = new google.maps.LatLng(21.033993712620113, -89.58439699660936);
               const map = new Map(document.getElementById("map"), {
                   zoom: 14,
                   center: originalMapCenter,
@@ -80,7 +80,7 @@ permalink: "/{{ page.fileSlug }}/"
               const infowindow = new google.maps.InfoWindow({
                   content: `
                     <span style="display: block;">Oficinas EMEKÁ
-                      <a href="{{ item.brandAddressUrl }}" target="_blank" style="display: block; color: #222; font-size: 16px;">Abrir en Google Maps</a>
+                      <a href="{{ link.brandAddressUrl }}" target="_blank" style="display: block; color: #222; font-size: 16px;">Abrir en Google Maps</a>
                     </span>
                   `,
                   position: originalMapCenter,

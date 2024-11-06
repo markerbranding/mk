@@ -6,7 +6,7 @@ interface arrayValidationRule {
 
 export default {
   name: 'productos',
-  title: 'Productos',
+  title: 'Desarrollos',
   type: 'document',
   groups: [
     {

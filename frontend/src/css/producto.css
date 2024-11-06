@@ -294,6 +294,8 @@ header{
 
     }
 }
+
+
 #section__product__divisor::after{
     content: "";
     position: absolute;
@@ -372,9 +374,13 @@ header{
             }
         }
         .col__right{
-            #map-container-product{
+            /*#map-container-product{
                 width: 100%;
                 min-height: 75vh;
+            }*/
+            #map {
+                height: 75vh;
+                width: 100%;
             }
         }
     }

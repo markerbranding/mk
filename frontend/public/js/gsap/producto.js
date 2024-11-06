@@ -36,6 +36,18 @@ function gsapSoloAnimations() {
         y: -50,
         duration: 0.8,
         ease: "power1.out"
-    }, "-=0.8")
+    }, "-=0.8");
+
+    gsap.from("#map", {
+        opacity: 0,
+        x: 100,
+        ease: "power1.out",
+        scrollTrigger: {
+            trigger: "#section__product__map",
+            start: "top 50%",
+            end: "40 50%",
+            scrub: 1,
+        }
+    })
 
 }

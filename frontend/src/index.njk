@@ -10,7 +10,7 @@ permalink: "/{{ page.fileSlug }}/"
 <div data-barba="container" data-barba-namespace="inicio" data-css="inicio" data-js="inicio">
   {% for item in inicio %}
   <section id="section__hero">
-    <div class="column__2 pad__lr__5">
+    <div class="column__2 hero__block1 pad__lr__5">
       <div class="col__left">
         <h1>{{ item.heroH1 }}</h1>
         <div>{{ item.heroH2 | safe }}</div>
@@ -27,7 +27,7 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
     <div class="column__1 img__hero pad__lr__5">
       {% if item.heroImg %}
-      <picture>
+      <picture class="hero__main__img">
         {% for format, images in item.heroImg %}
         <source srcset="{{ images | srcset }}" sizes="(max-width: 1800px) 100vw, 1800px" type="image/{{ format }}" />
         {% endfor %}
@@ -35,7 +35,7 @@ permalink: "/{{ page.fileSlug }}/"
       /></picture>
       {% endif %}
     </div>
-    <div class="column__3">
+    <div class="column__3 col3__grid">
       <div class="col__left">
         {% if item.heroGallery1 %}
         <picture class="heroGallery heroGalleryTL">

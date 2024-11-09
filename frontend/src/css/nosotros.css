@@ -251,8 +251,25 @@
        padding-top: 0;
     }
     #section__intro{
-        .col__right{
-            padding: 0;
+        padding: 10%;
+        .column__2{
+            flex-direction: column-reverse;
+            .col__left{
+
+            }
+            .col__right{
+                padding: 0;
+                height: 48vh;
+                background-color: aqua;
+                .pin-spacer{
+                    width: 100% !important;
+                }
+                .trazo__edificio{
+                    height: 48vh;
+                    width: 100% !important;
+                }
+            }
         }
+        
     }
 }

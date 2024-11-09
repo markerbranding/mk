@@ -75,6 +75,41 @@ header{
     display: block;
 }
 
+/*  Submenu  */
+
+.withSubmenu{
+    position: relative;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: var(--color-secondary);
+    width: 100%;
+    li{
+        border-bottom: 1px solid #ffffff20;
+        a{
+            height: 40px;
+            color: var(--color-accent);
+            text-transform: unset;
+            &:hover{
+                color: var(--color-white);
+            }
+            &::before{
+                content: unset !important;
+            }
+        }
+    }
+}
+
+.withSubmenu .submenu li a::before{
+    content: unset !important;
+}
+
+.withSubmenu:hover .submenu{
+    display: block !important;
+}
+
 .cta__msn{
     position: fixed;
     bottom: 30px;

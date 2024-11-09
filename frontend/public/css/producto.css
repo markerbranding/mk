@@ -455,6 +455,23 @@ header{
     border-color: var(--main-color-light) !important;
 }
 
+.submenu{
+    background-color: var(--color-primary);
+    li{
+        border-bottom: 1px solid #00000020;
+        a{
+            color: var(--color-secondary) !important;
+            &:hover{
+                color: var(--color-secondary) !important;
+                text-decoration: underline;
+            }
+            &::before{
+                content: unset !important;
+            }
+        }
+    }
+}
+
 
 
 

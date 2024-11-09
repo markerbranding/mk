@@ -152,37 +152,14 @@ function gsapSoloAnimations() {
 // Mobile
 mm.add("(max-width: 1024px)", () => {
 
-  let heroCol2 = gsap.getProperty("#section__hero > .column__2", "height");
+  let heroCol2 = gsap.getProperty(".hero__block1", "height");
   let heroCol1 = gsap.getProperty(".img__hero", "height");
   const alturaCol1y2 = heroCol1 + heroCol2;
   console.log(alturaCol1y2);
   console.log(heroCol1);
   console.log(heroCol2);
 
-  gsap.to(".img__hero", {
-    scrollTrigger: {
-      trigger: ".img__hero",
-      start: "top 60",
-      end: "+=160%",
-      endTrigger: ".column__3",
-      scrub: true,
-      pin: ".img__hero",
-      pinSpacing: false,
-    },
-  });
-
-  gsap.to(".heroGalleryTL", {
-    scrollTrigger: {
-      trigger: ".img__hero",
-      start: "top 0",
-      end: "bottom 0",
-      endTrigger: "#section__hero .column__3 .col__left .heroGallery:last-child",
-      scrub: true,
-      pin: "#section__hero .column__3 .col__left .heroGallery:first-child",
-      pinSpacing: false,
-      markers: true,
-    },
-  });
+  
 
 
 

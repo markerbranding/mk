@@ -1,9 +1,23 @@
 <ul role="list" class="nav__ul nav__ul__left">
-    {% for item in menuIzq %}
+    <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">Inicio</a></li>
+    <li class="withSubmenu"><a href="/desarrollos/" class="{% if page.url == '/desarrollos/' %}active{% endif %}">Desarrollos</a>
+
+        <ul role="list" class="submenu">
+            {% for proyectos in products %}
+                <li><a href="/desarrollos/{{ proyectos.slug.current }}">{{ proyectos.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </li>
+    
+</ul>
+
+
+
+<!--{% for item in menuIzq %}
         <li>
             <a href="{{ item.url }}" class="{% if page.url == item.url %}active{% endif %}" >
                 {{ item.name }}
             </a>
         </li>
-    {% endfor %}
-</ul>
+    {% endfor %}-->

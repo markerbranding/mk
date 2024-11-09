@@ -691,7 +691,47 @@ section{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
     }
+
+    .card {
+        &hover{
+            .card__pic{
+                picture{
+                    transform: scale(1.2) !important;
+                }
+            }
+        }
+        .card__pic{
+            .card__logo {
+                top: 20px;
+                left: calc(50% - 25px);
+                img {
+                    width: 50px;
+                }
+            }
+        }
+        .card__data{
+            margin-top: 10px;
+            .card__line{
+                width: 80px;
+                height: 5px;
+                margin-bottom: 18px;
+            }
+            .card__title {
+                span:first-child {
+                    font-size: var(--size-sm);
+                }
+                span:last-child {
+                    font-size: var(--size-sm);
+                }
+            }
+            .card__category{
+                font-size: var(--size-xs);
+            }
+        }
+        
+      }
     
+      
     
 
 }
@@ -728,5 +768,17 @@ section{
         row-gap: 30px;
     }
 
+    .card {
+        .card__data {
+            .card__title {
+                span:first-child {
+                    font-size: var(--size-md);
+                }
+                span:last-child {
+                    font-size: var(--size-md);
+                  }
+            }
+        }
+    }
 
 }

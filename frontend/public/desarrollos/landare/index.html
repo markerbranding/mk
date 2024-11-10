@@ -162,7 +162,6 @@
         </li>
     
 </ul>
-        <a class="cta__msn" href="https://wa.me/5219999704202" target="_blank">Mensaje</a>
     </div>
     <div id="mobile__active"></div>
     
@@ -587,7 +586,7 @@ Diseñado especialmente para crear el balance perfecto entre lo urbano y la natu
             </ul>
         </div>
         <div class="col__right">
-            <form id='form' class="column__1 flex__justify__c form" method="post" action="/submit-form" onsubmit="return validateForm()">
+            <form id='form' class="column__1 flex__justify__c form" method="POST" data-netlify="true" action="/gracias" onsubmit="return validateForm()">
     <div class="column__2 width__100 pad__bottom__2">
         <div class="col__left pad__right__5">
             <label for="nombre" class="width__100">Nombre:</label>
@@ -701,15 +700,16 @@ Diseñado especialmente para crear el balance perfecto entre lo urbano y la natu
     var thumbnails = new Splide('#thumbnail-carousel', {
       fixedWidth: 100,
       fixedHeight: 60,
-      gap: 10,
+      gap: 5,
       rewind: true,
       pagination: false,
       isNavigation: true,
       arrows: false,
       breakpoints: {
-        600: {
-          fixedWidth: 60,
-          fixedHeight: 44
+        768: {
+          fixedWidth: 50,
+          fixedHeight: 30,
+          gap: 2,
         }
       }
     });

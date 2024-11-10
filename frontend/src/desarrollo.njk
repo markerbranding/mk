@@ -248,15 +248,16 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     var thumbnails = new Splide('#thumbnail-carousel', {
       fixedWidth: 100,
       fixedHeight: 60,
-      gap: 10,
+      gap: 5,
       rewind: true,
       pagination: false,
       isNavigation: true,
       arrows: false,
       breakpoints: {
-        600: {
-          fixedWidth: 60,
-          fixedHeight: 44
+        768: {
+          fixedWidth: 50,
+          fixedHeight: 30,
+          gap: 2,
         }
       }
     });

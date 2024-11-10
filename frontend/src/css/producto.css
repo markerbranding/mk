@@ -7,6 +7,22 @@
     background-color: var(--color-primary);
 }
 
+#mobile__trigger span{
+    background-color: var(--color-accent);
+}
+
+#mobile__menu ul li a{
+    color: var(--color-secondary);
+}
+
+#mobile__trigger.active span:nth-child(1) {
+    background-color: var(--color-secondary);
+}
+
+#mobile__trigger.active span:nth-child(3) {
+    background-color: var(--color-secondary);
+}
+
 header{
     background-color: var(--color-secondary);
 }
@@ -364,7 +380,6 @@ header{
         z-index: -1;
     }
     .column__2{
-        border-bottom: 1px solid var(--color-black);
         padding-bottom: 5%;
         .col__left{
             justify-content: center;
@@ -436,7 +451,7 @@ header{
             justify-content: center;
             li{
                 width: 100% !important;
-                max-width: 200px !important;
+                max-width: 100px !important;
                 height: auto !important;
                 picture{
                     height: 100%;
@@ -476,34 +491,99 @@ header{
 
 
 @media (max-width: 1024px) {
-    .hiddenPseudo::after, 
-    .hiddenPseudo::before {
-        opacity: 0;
-    }
 
     #section__hero{
         flex-direction: column;
         padding: 0;
-        min-height: 100dvh;
+        height: auto;
+        min-height: unset;
         .producto__hero__img{
             position: relative;
+            object-fit: cover;
+            height: 60vh;
+        }
+        .column__2{
+            .col__left{
+                .cardProduct__head{
+                    padding: 0px 20px !important;
+                    height: 40px !important;
+                    top: -40px !important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .cardProduct__body {
+                    background-color: var(--main-color-light);
+                    margin-top: 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    max-height: 200px;
+                    .body__info{
+                        padding: 20px !important;
+                        width: calc(100% - 200px);
+                        h1{
+                            font-size: var(--size-xl);
+                        }
+                    }
+                    .body__logo{
+                        width: 170px !important;
+                    }
+                }
+
+            }
+            
         }
     }
 
+    #section__main__image{
+        &::after{
+            width: 50%;
+            height: 15%;
+            top: 0;
+            left: 0;
+        }
+        &::before{
+            width: 50%;
+            height: 15%;
+            top: 0;
+            right: 0;
+            left: unset;
+            background-color: var(--main-color);
+        }
+        .column__2{
+            .col__left{
+            }
+            .col__right{
+                padding: 5% 0%;
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        
+    }
+
+    
+
     #section__product__characteristics{
-        .column__2.block1{
+        padding: 10% 5%;
+        .block1{
+            padding: 15% 0;
             flex-direction: column-reverse;
-            gap: 2vh;
+            gap: 40px;
             .col__left{
                 width: 100% !important;
                 text-align: center;
             }
             .col__right.introImg{
+                width: 100%;
                 align-items: center;
                 justify-content: center;
                 img{
                     height: 100%;
-                    max-height: 250px;
+                    max-height: 100px;
                     object-fit: contain;
                 }
             }
@@ -515,46 +595,158 @@ header{
                 }
                 ul{
                     padding-left: 0;
+                    li{
+                        margin-bottom: 10px;
+                        &::after{
+                            left: 0;
+                        }
+                    }
                 }
             }
         }
     }
-    #map-container-product{
-        height: 50vh;
-    }
-}
 
-@media (max-width: 768px) {
-    .hiddenPseudo::after, 
-    .hiddenPseudo::before {
-        opacity: 0;
-    }
-    #section__hero{
-        padding: 0;
-        min-height: 40dvh ;
-    }
-    #section__main__image{
-        padding: 0;
-        .column__2{
-            .col__right{
-                padding-top: 5%;
-                padding-left: 5%;
+    #section__product__amenities{
+        padding: 10% 5%;
+        .column__1{
+            ul{
+                grid-template-columns: repeat(3, 1fr);
+                border-bottom: 0px;
+                padding-bottom: 0px;
+                li{
+                    img{
+                        max-width: 90px;
+                        border: 4px solid var(--main-color);
+                        border-radius: 15px;
+                    }
+                    h3{
+                        font-size: var(--size-md);
+                    }
+                }
             }
         }
     }
-    #section__hero{
+
+
+    #section__product__map{
+        padding: 10% 5%;
+        &::after{
+            display: none;
+        }
+        .column__2{
+            .col__left{
+
+            }
+            .col__right{
+                #map{
+                    height: 50vh;
+                }
+            }
+        }
+    }
+
+    #section__product__gallery{
+        padding: 0% 5%;
         .column__1{
-            left: 0 !important;
+            padding: 10% 0%;
+            #main-carousel {
+                .splide__track {
+                    .splide__list {
+                        li {
+                            picture {
+                                height: 40vh !important;
+                                width: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+                    }
+                }
+            }
+            #thumbnail-carousel {
+                ul {
+                    li {
+                        max-width: 50px !important;
+                        picture {
+                            img {
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+
+
+}
+
+
+
+@media (max-width: 768px) {
     
-    #section__product__amenities{
-        ul{
-            grid-template-columns: repeat(2, 1fr);
+    #section__hero {
+        .producto__hero__img{
+            height: 40vh;
+        }
+        .column__2 {
+            .col__left {
+                .cardProduct__body {
+                    background-color: var(--main-color-light);
+                    margin-top: 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    max-height: 200px;
+                    .body__info {
+                        padding: 20px !important;
+                        width: calc(100% - 100px);
+                        h1{
+                            font-size: var(--size-lg);
+                        }
+                    }
+                    .body__logo {
+                        width: 100px !important;
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
-    #map-container-product{
-        height: 25vh;
+
+    #section__product__amenities {
+        .column__1 {
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+                border-bottom: 0px;
+                padding-bottom: 0px;
+            }
+        }
+    }
+
+    #section__product__gallery{
+        .column__1{
+            #main-carousel {
+                .splide__track {
+                    .splide__list {
+                        li {
+                            picture {
+                                height: 30vh !important;
+                            }
+                        }
+                    }
+                }
+            }
+            #thumbnail-carousel {
+                margin-top: 5px;
+                ul {
+                    li {
+                        max-width: 30px !important;
+                    }
+                }
+            }
+        }
     }
 
 

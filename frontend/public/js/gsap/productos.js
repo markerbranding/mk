@@ -47,6 +47,19 @@ function gsapSoloAnimations() {
         drawSVG: "0%",
         stagger: 0.010,
         duration: 1,
-    }, "-=1.2")
+    }, "-=1.2");
+
+
+    // Batch Cards
+    ScrollTrigger.batch(".card", {
+        trigger: "#listado__desarrollos",
+        start: "top, 70%",
+        end: "top, 60%",
+        onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+        onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+        onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+        onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
+    });
+
 
 }

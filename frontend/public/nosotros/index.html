@@ -162,7 +162,6 @@
         </li>
     
 </ul>
-        <a class="cta__msn" href="https://wa.me/5219999704202" target="_blank">Mensaje</a>
     </div>
     <div id="mobile__active"></div>
     
@@ -187,42 +186,47 @@
     <div class="titulo__creamos"></div>
   </section>
 
+  <section id="section__title">
+    <div class="column__1">
+      <div class="titulo__habitat"></div>
+    </div>
+  </section>
+
   <section id="section__intro">
-    <div class="titulo__habitat"></div>
     <div class="column__2 pin__start">
       <div class="col__left">
-        <div class="info__top fadeInOut">
+        <div class="info__top info__bloque fadeInOut snap__bloque">
           <h3 class="subtitle">Desarrollador de proyectos inmobiliarios</h3>
           <h2>Construimos para tu comodidad</h2>
           <p>Nos dedicamos a construir desarrollos pensando siempre en la parte humana y funcional.
 Creamos comunidades en las que se pueda obtener la mejor calidad de vida.</p><p>Yucatán y Quintana Roo son estados con alta plusvalía y que ofrecen un potencial de crecimiento garantizado.
 Con una gran conectividad estratégica a nivel internacional, son estados con un gran atractivo para inversionistas nacionales y extranjeros.</p>
         </div>
-        <div class="info__bottom fadeInOut">
+        <div class="info__bottom info__bloque fadeInOut">
           <h3>Nuestro enfoque en cada proyecto</h3>
           <div class="value__wrapper">
-            <div class="value">
+            <div class="value snap__bloque">
               <img src="/images/nosotros/icono_minimalista.svg" />
               <h3>Enfoque minimalista</h3>
               <p>Optamos por la simplicidad en cada espacio, creando ambientes ordenados y funcionales
                 que priorizan la comodidad y una estética elegante y sin excesos.
               </p>
             </div>
-            <div class="value">
+            <div class="value snap__bloque">
               <img src="/images/nosotros/icono_modernista.svg" />
               <h3>Diseño moderno</h3>
               <p>Nuestros proyectos combinan líneas modernas y materiales duraderos, logrando un
                 estilo sofisticado que se adapta a la vida contemporánea sin sacrificar funcionalidad.
               </p>
             </div>
-            <div class="value">
+            <div class="value snap__bloque">
               <img src="/images/nosotros/icono_efectivo.svg" />
               <h3>Hábitat efectivo</h3>
               <p>Espacios optimizados que aprovechan cada metro, integrando soluciones prácticas y estéticas
                 para una vida cómoda, funcional y perfectamente organizada.
               </p>
             </div>
-            <div class="value">
+            <div class="value snap__bloque">
               <img src="/images/nosotros/icono_verde.svg" />
               <h3>Concepto verde</h3>
               <p>Promovemos la sostenibilidad a través de materiales eco-amigables y áreas verdes,
@@ -469,7 +473,7 @@ Con una gran conectividad estratégica a nivel internacional, son estados con un
             </ul>
         </div>
         <div class="col__right">
-            <form id='form' class="column__1 flex__justify__c form" method="post" action="/submit-form" onsubmit="return validateForm()">
+            <form id='form' class="column__1 flex__justify__c form" method="POST" data-netlify="true" action="/gracias" onsubmit="return validateForm()">
     <div class="column__2 width__100 pad__bottom__2">
         <div class="col__left pad__right__5">
             <label for="nombre" class="width__100">Nombre:</label>

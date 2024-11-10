@@ -528,7 +528,12 @@
     }
 
     #section__intro{
-        padding: 15% 5% 10%;
+        padding: 22% 5% 10%;
+        .titulo__habitat{
+            width: 70vw;
+            height: 40vh;
+            right: 10vw;
+        }
     }
 
     .intro__slider1, .intro__slider2{
@@ -542,6 +547,7 @@
     #section__arch {
         .column__2 {
             .col__left {
+                align-items: center;
                 width: 100%;
                 padding-right: 0px;
                 padding: 15% 5%;

@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
                 onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
                 onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
-              });
+            });
 
 
             // Batch Footer:

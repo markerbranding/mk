@@ -248,6 +248,14 @@ footer{
         padding: 10% 5% 20px;
     }
 
+    #inner__footer {
+        & span {
+          color: var(--color-secondary);
+          font-size: 13px;
+          padding-right: 90px;
+        }
+      }
+
     footer .column__1{
         gap: 50px;
     }

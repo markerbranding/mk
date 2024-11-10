@@ -76,11 +76,12 @@
         }
         .col__right{
             #form{
-                font-size: var(--size-sm);
                 padding: 1%;
+                font-size: var(--size-sm);
+                row-gap: 0px;
                 .column__2{
                     .col__left{
-                        padding-right: 5%;
+                        padding-right: 0%;
                     }
                 }
                 input, select, textarea{
@@ -128,7 +129,7 @@
 #map {
     height: 60vh;
     width: 100%;
-  }
+}
 
 /* Formulario */
 form{
@@ -185,12 +186,75 @@ form button{
 /*  Tableta  */
 @media only screen and (max-width: 1024px) {
 
+    #section__hero{
+        padding: calc(60px + 5%) 5% 0%;
+        &::after{
+            height: 10%;
+        }
+        .column__2{
+            .col__left{
+                padding-right: 10%;
+                padding-bottom: 7%;
+                width: 100%;
+                h1{
+                    color: var(--color-accent);
+                }
+                h2{
+                    font-size: var(--size-3xl);
+                    color: var(--color-secondary-light);
+                }
+                h2 strong{
+                    color: var(--color-primary-light);
+                    font-weight: unset;
+                }
+                p{
+                    color: var(--color-white);
+                    font-size: var(--size-md);
+                }
+            }
+            .col__right{
+                width: 100%;
+            }
+        }   
+    }
+
+    #section__data__contact {
+        background-color: var(--color-secondary-light);
+        padding: 10% 5% 5%;
+        .column__2 {
+            .col__left {
+                padding-right: 0px;
+                h4{
+                    font-size: var(--size-sm);
+                    text-transform: uppercase;
+                    margin-bottom: 0px;
+                }
+                a{
+                    font-size: var(--size-md);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
     #section__intro .col__left{
         padding-right: 0%;
     }
 
     form{
-        padding: 0%;
+        padding: 1%;
+    }
+
+    #section__map{
+        padding: 5% 5% 0%;
+        .column__top{
+            padding-top: 10%;
+        }
+    }
+    
+    #map {
+        height: 50vh;
+        width: 100%;
     }
 
 }
@@ -203,6 +267,17 @@ form button{
 
 /*  Móvil  */
 @media only screen and (max-width: 768px) {
+
+    #section__hero {
+        .column__2 {
+            .col__left {
+                h2 {
+                    font-size: var(--size-2xl);
+                    color: var(--color-secondary-light);
+                }
+            }
+        }
+    }
 
     form{
         display: flex;

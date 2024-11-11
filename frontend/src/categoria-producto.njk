@@ -1,11 +1,11 @@
 ---
 eleventyComputed:
-    title: "{{ categoriasProductos[0].titleseo }}"
-    description: "{{ categoriasProductos[0].descseo }}"
-    keywords: "{{ categoriasProductos[0].keyseo }}"
+  title: "{{ categoria.titleseo }}"
+  description: "{{ categoria.descseo }}"
+  keywords: "{{ categoria.keyseo }}"
 layout: base.njk
 pagination:
-  data: collections.uniqueCategories
+  data: collections.categorias
   size: 1
   alias: categoria
 permalink: "/productos/categorias/{{ categoria.slug.current }}/"
@@ -25,7 +25,7 @@ permalink: "/productos/categorias/{{ categoria.slug.current }}/"
     <p>{{ categoria.slug.current }}</p>
     <ul role="list" class="listado__x3 width__100 hide__category">
       {%- for item in categoria.products %}
-        {% include "producto-card.njk" %}
+        {% include "desarrollo-card.njk" %}
       {%- endfor %}
     </ul>
     </div>

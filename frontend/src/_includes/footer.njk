@@ -8,7 +8,7 @@
     <div class="footer__column">
       <h2>Desarrollos</h2>
       <ul>
-        {% for item in products %}
+        {% for item in collections.productos %}
         <li><a href="/desarrollos/{{ item.slug.current }}">{{ item.title }}</a></li>
         {% endfor %}
       </ul>

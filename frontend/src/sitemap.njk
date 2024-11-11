@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+layout: null
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for page in collections.all %}
+    <url>
+        <loc>{{ metadata.siteUrl }}{{ page.url | url }}</loc>
+        <lastmod>2024-06-03T08:45:00.000Z</lastmod>
+        <priority>0.8</priority>
+    </url>
+    {% endfor %}
+
+    {% for product in collections.productos %}
+    <url>
+        <loc>{{ metadata.siteUrl }}/productos/{{ product.slug.current }}</loc>
+        <lastmod>{{ product.publishedAt }}</lastmod>
+        <priority>0.8</priority>
+    </url>
+    {% endfor %}
+</urlset> 

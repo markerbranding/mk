@@ -3,8 +3,8 @@
     <li class="withSubmenu"><a href="/desarrollos/" class="{% if page.url == '/desarrollos/' %}active{% endif %}">Desarrollos</a>
 
         <ul role="list" class="submenu">
-            {% for proyectos in products %}
-                <li><a href="/desarrollos/{{ proyectos.slug.current }}">{{ proyectos.title }}</a></li>
+            {% for proyectos in collections.productos %}
+                <li><a href="/desarrollos/{{ proyectos.slug.current }}" class="{% if page.url == '/desarrollos/{{ proyectos.slug.current }}' %}active{% endif %}">{{ proyectos.title }}</a></li>
             {% endfor %}
         </ul>
 

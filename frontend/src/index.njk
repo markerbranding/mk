@@ -46,7 +46,7 @@ permalink: "/{{ page.fileSlug }}/"
             type="image/{{ format }}"
           />
           {% endfor %}
-          <img src="{{ item.heroGallery1.jpeg[0].url }}" />
+          <img src="{{ item.heroGallery1.webp[0].url }}" />
         </picture>
         {% endif %} {% if item.heroGallery2 %}
         <picture class="heroGallery heroGalleryBL">
@@ -57,7 +57,7 @@ permalink: "/{{ page.fileSlug }}/"
             type="image/{{ format }}"
           />
           {% endfor %}
-          <img src="{{ item.heroGallery2.jpeg[0].url }}" />
+          <img src="{{ item.heroGallery2.webp[0].url }}" />
         </picture>
         {% endif %}
       </div>
@@ -72,7 +72,7 @@ permalink: "/{{ page.fileSlug }}/"
             type="image/{{ format }}"
           />
           {% endfor %}
-          <img src="{{ item.heroGallery3.jpeg[0].url }}" />
+          <img src="{{ item.heroGallery3.webp[0].url }}" />
         </picture>
         {% endif %} {% if item.heroGallery4 %}
         <picture class="heroGallery heroGalleryBR">
@@ -83,7 +83,7 @@ permalink: "/{{ page.fileSlug }}/"
             type="image/{{ format }}"
           />
           {% endfor %}
-          <img src="{{ item.heroGallery4.jpeg[0].url }}" />
+          <img src="{{ item.heroGallery4.webp[0].url }}" />
         </picture>
         {% endif %}
       </div>
@@ -136,9 +136,9 @@ permalink: "/{{ page.fileSlug }}/"
       {% for band in item.introBand1 %}
         <picture>
           {% for format, images in band %}
-          <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
+          <source srcset="{{ images | srcset }}" sizes="(max-width: 300px) 100vw, 300px" type="image/{{ format }}" />
           {% endfor %}
-          <img src="{{ band.jpeg[0].url }}" alt="{{ band.altText }}" />
+          <img src="{{ band.webp[0].url }}" alt="{{ band.altText }}" />
         </picture>
       {% endfor %}
     </div>
@@ -146,9 +146,9 @@ permalink: "/{{ page.fileSlug }}/"
       {% for band in item.introBand2 %}
         <picture>
           {% for format, images in band %}
-          <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
+          <source srcset="{{ images | srcset }}" sizes="(max-width: 300px) 100vw, 300px" type="image/{{ format }}" />
           {% endfor %}
-          <img src="{{ band.jpeg[0].url }}" alt="{{ band.altText }}" />
+          <img src="{{ band.webp[0].url }}" alt="{{ band.altText }}" />
         </picture>
       {% endfor %}
     </div>
@@ -165,9 +165,9 @@ permalink: "/{{ page.fileSlug }}/"
         {% if item.intro2.intro2Img %}
           <picture data-speed="1.2">
             {% for format, images in item.intro2.intro2Img %}
-            <source srcset="{{ images | srcset }}" sizes="(max-width: 900px) 100vw, 900px" type="image/{{ format }}" />
+            <source srcset="{{ images | srcset }}" sizes="(max-width: 1200px) 100vw, 1200px" type="image/{{ format }}" />
             {% endfor %}
-            <img src="{{ item.intro2.intro2Img.jpeg[0].url }}" alt="{{ item.intro2.intro2ImgAlt }}" />
+            <img src="{{ item.intro2.intro2Img.webp[0].url }}" alt="{{ item.intro2.intro2ImgAlt }}" />
           </picture>
         {% endif %}
       </div>

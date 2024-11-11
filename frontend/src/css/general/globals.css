@@ -598,13 +598,15 @@ section{
 
 #section__gracias{
     h1{
-        font-size: var(--size-2xl);
-        color: var(--color-primary);
+        font-size: var(--size-xl);
+        color: var(--color-secondary);
+        font-weight: 500;
     }
     h2{
         font-size: var(--size-md);
         color: var(--color-secondary);
         line-height: 1.4;
+        text-transform: unset;
         font-weight: 400;
     }
 }

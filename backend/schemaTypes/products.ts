@@ -310,6 +310,12 @@ export default defineType({
         layout: 'grid',
       },
     }),
+    defineField({
+      name: 'formDesarrollo',
+      title: 'Formulario del CRM',
+      description: 'Dejar vacío en caso de usar el formulario base',
+      type: 'text'
+    }),
   ],
 
   preview: {

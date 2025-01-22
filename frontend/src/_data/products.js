@@ -5,6 +5,7 @@ module.exports = async function () {
   const data = await client.fetch(`*[_type == "products"]{
     titleseo,
     descseo,
+    formDesarrollo,
     color{hex},
     colorLight{hex},
     keyseo,

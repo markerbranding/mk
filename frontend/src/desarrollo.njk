@@ -231,7 +231,43 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
       </div>
     </div>
   </section>
-  {% include 'prefooter.njk' %}
+  <section id="section__prefooter" class="fadeInOut">
+    <div class="column__2">
+        <div class="col__left pad__right__5">
+            <h3 class="subtitle">contacto</h3>
+            <h2>Entremos en contacto</h2>
+            <ul role="list" class="infoList">
+                {% for item in empresa %}
+                <li class="flex flex__col">
+                    <h4>Teléfono</h4>
+                    <a class="tel__text" href="tel:{{ item.brandPhone }}">{{ item.brandPhone }}</a>
+                </li>
+                <li class="flex flex__col">
+                    <h4>Correo Electrónico</h4>
+                    <a href="mailto:{{ item.brandEmail }}">{{ item.brandEmail }}</a>
+                </li>
+                <li class="flex flex__col">
+                    <h4>Oficinas</h4>
+                    <a href="{{ item.brandAddressUrl }}" target="_blank">{{ item.brandAddress }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col__right">
+          {% if producto.formDesarrollo %}
+          {{ producto.formDesarrollo | safe }}
+      {% else %}
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <script>
+          hbspt.forms.create({
+              portalId: "49027416",
+              formId: "639dc3b5-093b-41b4-96cc-caf429937b83"
+          });
+          </script>
+      {% endif %}
+        </div>
+    </div>
+</section>
 </div>
 
 

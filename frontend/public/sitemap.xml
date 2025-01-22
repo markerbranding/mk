@@ -38,6 +38,12 @@
     </url>
     
     <url>
+        <loc>https://emeka.mx/desarrollos/pasmiera/</loc>
+        <lastmod>2024-06-03T08:45:00.000Z</lastmod>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://emeka.mx/desarrollos/</loc>
         <lastmod>2024-06-03T08:45:00.000Z</lastmod>
         <priority>0.8</priority>
@@ -51,12 +57,6 @@
     
     <url>
         <loc>https://emeka.mx/</loc>
-        <lastmod>2024-06-03T08:45:00.000Z</lastmod>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://emeka.mx/desarrollos/pasmiera/</loc>
         <lastmod>2024-06-03T08:45:00.000Z</lastmod>
         <priority>0.8</priority>
     </url>
